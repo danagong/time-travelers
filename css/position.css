@@ -7,7 +7,7 @@ body{
 }
 
 #heading{
-    bottom: 0;
+    /* bottom: 0; */
     /* float: bottom; */
     margin-left: 10px;
     z-index: -1;

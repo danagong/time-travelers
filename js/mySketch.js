@@ -1,38 +1,42 @@
 //p5.js shader basic structure ref from https://www.openprocessing.org/sketch/920144
 //mySketch.js is a modified version of sketch954948 from openprocessing.org
+
+var canvas1 = function(p){
+
+
 let theShader;
 
-function preload(){
+p.preload = function(){
 	theShader = new p5.Shader(this.renderer,vert,frag)
 }
 
 let drawingGraphics
 let WebglGraphics
-function setup() {
+p.setup = function() {
 	
-	createCanvas(1435,1000);
-	noStroke();
-	WebglGraphics = createGraphics(width,height,WEBGL)
-	drawingGraphics = createGraphics(width,height)
-	background(255)
-	mouseX = width/2
-	mouseY = height/2
+	p.createCanvas(1435,1000);
+	p.noStroke();
+	WebglGraphics = p.createGraphics(p.width,p.height,p.WEBGL)
+	drawingGraphics = p.createGraphics(p.width,p.height)
+	p.background(255)
+	mouseX = p.width/2
+	mouseY = p.height/2
 }
 
-function draw() {
+p.draw = function() {
 	WebglGraphics.shader(theShader)
-	theShader.setUniform('u_resolution',[width/1000,height/1000])
-	theShader.setUniform('u_time',millis()/1000)
-	theShader.setUniform('u_mouse',[mouseX/width,mouseY/height])
+	theShader.setUniform('u_resolution',[p.width/1000,p.height/1000])
+	theShader.setUniform('u_time',p.millis()/1000)
+	theShader.setUniform('u_mouse',[mouseX/p.width,mouseY/p.height])
 	theShader.setUniform('tex0',drawingGraphics)
 	
-	drawingGraphics.clear(0,0,width,height)
+	drawingGraphics.clear(0,0,p.width,p.height)
 	// drawingGraphics.ellipse(mouseX,mouseY,850)
 	
 	drawingGraphics.stroke(255)
 	drawingGraphics.strokeWeight(2)
 	drawingGraphics.push()
-	if (mouseIsPressed){
+	if (p.mouseIsPressed){
 		drawingGraphics.noFill()
 	}else{
 		drawingGraphics.fill(147,3,176)
@@ -46,17 +50,17 @@ function draw() {
 	
 	drawingGraphics.push()
 		drawingGraphics.textSize(105)
-		drawingGraphics.textStyle(BOLDITALIC)
+		drawingGraphics.textStyle(p.BOLDITALIC)
 
-		if (mouseIsPressed){
+		if (p.mouseIsPressed){
 			drawingGraphics.fill(255)
 		}else{
 			drawingGraphics.fill(0)
 		}
 
-		for(var i=0;i<height+400;i+=200){
+		for(var i=0;i<p.height+400;i+=200){
 			if(i<600){
-				var word= drawingGraphics.text("TIME TRAVELERS",50,i+(frameCount/(5/log(mouseY))  )%200  )
+				var word= drawingGraphics.text("TIME TRAVELERS",50,i+(p.frameCount/(5/p.log(mouseY))  )%200  )
 			}
 		
 
@@ -68,9 +72,9 @@ function draw() {
 			//drawingGraphics.ellipse(i,o,(i/50%5==0)? 20:10)
 		//}
 	//}
-	WebglGraphics.rect(-width/2,-height/2,width,height)
+	WebglGraphics.rect(-p.width/2,-p.height/2,p.width,p.height)
 	
-	image(WebglGraphics,0,0)
+	p.image(WebglGraphics,0,0)
 	
 	// image(drawingGraphics,0,0)
 	// rotateY(frameCount/100)
@@ -80,3 +84,6 @@ function draw() {
 // function keyPressed(){
 // 	save() 
 // }
+};
+
+var addC1 = new p5(canvas1, 'canvas1HTML');

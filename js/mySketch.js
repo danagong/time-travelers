@@ -19,7 +19,7 @@ p.setup = function() {
 	p.noStroke();
 	WebglGraphics = p.createGraphics(p.width,p.height,p.WEBGL)
 	drawingGraphics = p.createGraphics(p.width,p.height)
-	p.background(255)
+	p.background('rgb(25,25,25)')
 	mouseX = p.width/2
 	mouseY = p.height/2
 }

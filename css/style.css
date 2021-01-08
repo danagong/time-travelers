@@ -42,12 +42,15 @@ body{
     color: white;
     background-color: #191919;
     font-family: Cooper-Hewitt-ThinItalic;
-    margin-left: 20px;
 
 }.topgraphic{
     top: 0;
     position: absolute;
     
+}
+
+.notcanvas{
+    margin-left: 20px;
 }
 
 .row{
@@ -57,7 +60,7 @@ body{
 
 #q1, #q2, #q3, #q4{
     width: 25%;
-    font-family: Cooper-Hewitt-Bold;
+    font-family: Cooper-Hewitt-ThinItalic;
 }
 
 

@@ -14,9 +14,12 @@ p.preload = function(){
 let drawingGraphics
 let WebglGraphics
 p.setup = function() {
-	p.background(10,10,10)
 	
-	p.createCanvas(1435,1000);
+	
+	p.createCanvas(p.windowWidth,1000);
+	p.background(p.CMYK, 0, 0, 0, 90);
+	
+
 	p.noStroke();
 	WebglGraphics = p.createGraphics(p.width,p.height,p.WEBGL)
 	drawingGraphics = p.createGraphics(p.width,p.height)
@@ -26,9 +29,11 @@ p.setup = function() {
 }
 
 p.draw = function() {
+	p.clear();
+  p.background(p.CMYK, 0, 0, 0, 90);
 	WebglGraphics.shader(theShader)
 	theShader.setUniform('u_resolution',[p.width/1000,p.height/1000])
-	theShader.setUniform('u_time',p.millis()/1000)
+	theShader.setUniform('u_time',p.millis()/10000)
 	theShader.setUniform('u_mouse',[mouseX/p.width,mouseY/p.height])
 	theShader.setUniform('tex0',drawingGraphics)
 	

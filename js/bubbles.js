@@ -76,7 +76,7 @@ p.draw = function() {
 			drawingGraphics.fill(0)
 		}
 
-  for (let i = 0; i < _objectNum; i++) {
+  for (let i = 0; i < 6; i++) {
     _aryObject[i].update();
     _aryObject[i].draw();
   }
@@ -102,7 +102,7 @@ p.line = class{
       p.height/3 * p.sin(8*3.14*p.noise(this.nsY))
     ]);
 
-    while (this.aryPoints.length > _maxPoint) {
+    while (this.aryPoints.length > _maxPoint-1) {
       this.aryPoints.pop();
     }
   }

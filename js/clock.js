@@ -1,5 +1,5 @@
 let now = new Date();
-let next = "1";
+let current = "1";
 let positions = [[50, 60 * 51, 3600 * 10], [10, 60 * 11, 3600 * 2], [36, 60 * 39, 3600 * 8], [13, 60 * 19, 3600 * 4]];
 
 function setTime(left, hand) {
@@ -20,20 +20,20 @@ $(document).ready(function() {
   $("#start").click(function() {
     $(".top").hide();
     $(".leadin").show();
-    $("#q-" + next).show();
-     getTimes(positions[next-1][0], positions[next-1][1], positions[next-1][2]);
-     next = "2";
+    $("#q-" + current).show();
+     getTimes(positions[current-1][0], positions[current-1][1], positions[current-1][2]);
   });
 
-  $("input[name=agreement]:radio").click(function() {
-     // setTime(0, "second");
+  $("input[type='radio']").click(function() {
+    $("#q-" + current + " .answer").text($("input[type='radio']:checked").val());
+    $("#q-" + current + " .choices").hide();
+    current++;
+    
     $(".clock__second").addClass("spin");
     setTimeout(function(){
       $(".clock__second").removeClass("spin");
-      // $(".spin").css("animation-play-state", "paused");
-      $("#q-" + next).show();
-      getTimes(positions[next-1][0], positions[next-1][1], positions[next-1][2]);
-      next++;
+      $("#q-" + current).show();
+      getTimes(positions[current-1][0], positions[current-1][1], positions[current-1][2]);
     }, 1000);
     
   });

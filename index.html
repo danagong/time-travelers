@@ -29,12 +29,14 @@
 
         <!--The Questionnaire Section-->
         <div class="section nav-section" id="questionnaire">
-            <p class="book"> How much do you agree with the following statements:</p>
-
-
+            <div class="top">
+                <p class="book">Your Understanding of Time:</p>
+                <a id="start">begin</a>
+            </div>
+            <p class="leadin book"> How much do you agree with the following statements:</p>
             <div class="container">
                 <div class="questions-left">
-                   <div class="question-section">
+                   <div id="q-1" class="question-section">
                         <p class="statement">time is money</p>
                         <div class="choices">
                             <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="">
@@ -49,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="question-section">
+                    <div id="q-3" class="question-section">
                         <p class="statement">silence is uncomfortable</p>
                         <div class="choices">
                             <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="">
@@ -68,17 +70,19 @@
                 <div class="clock-section">
                   <!-- <div class="box">&nsbp;</div> -->
                     <div class="clock">
-                      <div class="clock__outline">
+                      <div class="clock__outline-outer">
+                         <div class="clock__outline">
                           <div class="clock__second"></div>
                           <div class="clock__minute"></div>
                           <div class="clock__hour"></div>
                           <div class="clock__axis"></div>
                       </div>
+                      </div>
                     </div>
 
                 </div>
                 <div class="questions-right">
-                    <div class="question-section">
+                    <div id="q-2" class="question-section">
                         <p class="statement">you would rather be late for your next meeting than cut the flow of your current discussion</p>
                         <div class="choices">
                             <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="">
@@ -93,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="question-section">
+                    <div id="q-4" class="question-section">
                         <p class="statement">time is measured by the clock</p>
                         <div class="choices">
                             <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="">
@@ -155,16 +159,10 @@
 
 
     </div>
-
-
 </div>
 </div>
 <div id= "canvas2HTML"></div>
-
-<!-- Vis JS -->
-
-<script src="js/questionaire.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="js/clock.js"></script>
 </body>
-
 </html>

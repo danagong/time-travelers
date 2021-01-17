@@ -2,9 +2,6 @@
 $size: 350px;
 
 // inspired by https://codepen.io/kylewetton/pen/QJbOjw
-.clock-section {
-    // border: 1px solid red;
-}
 
 .clock {
     height: 100%;
@@ -12,7 +9,7 @@ $size: 350px;
     justify-content: center;
     align-items: center;
     &__outline {
-        box-shadow: 12px 3px 6px 3px #cc99a2;
+        // box-shadow: 12px 3px 6px 3px #cc99a2;
         height: $size;
         width: $size;
         border: 3px solid g.$pink;
@@ -21,6 +18,15 @@ $size: 350px;
         justify-content: center;
         position: relative;
     }
+    &__outline-outer {
+        border: 2px solid g.$hotpink;
+        height: $size;
+        width: $size;
+        border-radius: 50%;
+        margin: 2px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+    }
     &__second, &__minute, &__hour {
         position: absolute;
         left: 50%;
@@ -28,24 +34,19 @@ $size: 350px;
         z-index: 2;
         border-radius: 2px;
     }
-    &__minute, &__hour {
-        width: 2.5px;
-    }
-    &__second {
-        width: 1.5px;
-    }
     &__second {
         height: ($size / 2) - 15;
         margin-top: 15px;
         background: g.$hotpink;
         animation: time 60s infinite steps(60);
         z-index: 3;
+        width: 1px;
     }
     &__axis {
         position: absolute;
         top: calc(50% - 1px);
         left: calc(50% - 1.5px);
-        background: g.$pink;
+        background: g.$hotpink;
         width: 7px;
         height: 7px;
         border-radius: 3px;
@@ -57,13 +58,18 @@ $size: 350px;
         opacity: 0.75;
         animation: time 3600s infinite steps(60);
         background: white;
+         width: 2px;
     }
     &__hour {
         height: ($size / 2) - 70;
         margin-top: 70px;
         animation: time 43200s linear infinite;
-        background: #4c4c4c;
-      }
+        background: #ffadad;
+        width: 3px;
+    }
+    .spin {
+        animation: time 1s infinite;
+    }
 }
 
 @keyframes time {

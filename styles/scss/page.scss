@@ -98,6 +98,21 @@ p {
 
 #questionnaire {
     margin-top: -3px;
+    .top {
+        display: flex;
+        align-items: baseline;
+        #start {
+            margin-left: 1em;
+            text-decoration: underline;
+            color: white;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .leadin {
+        display: none;
+    }
     .container {
         width: 85%;
         min-height: 60vh;
@@ -119,6 +134,7 @@ p {
     }
     
     .question-section {
+        display: none;
         text-align: center;
         .statement {
             font-family: 'CooperHewitt';
@@ -130,6 +146,5 @@ p {
         .question-section:first-of-type {
             margin-bottom: 1em;
         }
-        
     }
 }

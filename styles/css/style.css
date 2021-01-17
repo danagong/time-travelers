@@ -122,6 +122,21 @@ p {
 #questionnaire {
   margin-top: -3px;
 }
+#questionnaire .top {
+  display: flex;
+  align-items: baseline;
+}
+#questionnaire .top #start {
+  margin-left: 1em;
+  text-decoration: underline;
+  color: white;
+}
+#questionnaire .top #start:hover {
+  cursor: pointer;
+}
+#questionnaire .leadin {
+  display: none;
+}
 #questionnaire .container {
   width: 85%;
   min-height: 60vh;
@@ -139,6 +154,7 @@ p {
   width: 40%;
 }
 #questionnaire .question-section {
+  display: none;
   text-align: center;
 }
 #questionnaire .question-section .statement {
@@ -159,7 +175,6 @@ p {
   align-items: center;
 }
 .clock__outline {
-  box-shadow: 12px 3px 6px 3px #cc99a2;
   height: 350px;
   width: 350px;
   border: 3px solid #fda5b4;
@@ -168,6 +183,15 @@ p {
   justify-content: center;
   position: relative;
 }
+.clock__outline-outer {
+  border: 2px solid #ff3377;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  margin: 2px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
 .clock__second, .clock__minute, .clock__hour {
   position: absolute;
   left: 50%;
@@ -175,24 +199,19 @@ p {
   z-index: 2;
   border-radius: 2px;
 }
-.clock__minute, .clock__hour {
-  width: 2.5px;
-}
-.clock__second {
-  width: 1.5px;
-}
 .clock__second {
   height: 160px;
   margin-top: 15px;
   background: #ff3377;
   animation: time 60s infinite steps(60);
   z-index: 3;
+  width: 1px;
 }
 .clock__axis {
   position: absolute;
   top: calc(50% - 1px);
   left: calc(50% - 1.5px);
-  background: #fda5b4;
+  background: #ff3377;
   width: 7px;
   height: 7px;
   border-radius: 3px;
@@ -204,12 +223,17 @@ p {
   opacity: 0.75;
   animation: time 3600s infinite steps(60);
   background: white;
+  width: 2px;
 }
 .clock__hour {
   height: 105px;
   margin-top: 70px;
   animation: time 43200s linear infinite;
-  background: #4c4c4c;
+  background: #ffadad;
+  width: 3px;
+}
+.clock .spin {
+  animation: time 1s infinite;
 }
 
 @keyframes time {

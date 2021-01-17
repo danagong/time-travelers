@@ -41,7 +41,7 @@ p.setup = function()  {
 
 p.draw = function() {
   p.clear();
-  p.blendMode(p.DIFFERENCE);
+  p.blendMode(p.HARD_LIGHT);
   p.background(p.CMYK, 0, 0, 0, 90);
 
   WebglGraphics.shader(theShader)
@@ -90,7 +90,7 @@ p.line = class{
   constructor() {
     this.nsX = p.random(100);
     this.nsY = p.random(100);
-    this.color = p.color(p.random(360), 100, 100, 255);
+    this.color = p.color(147,3,176);
     this.sw = p.random(p.width/20, p.width/3);
     this.aryPoints = [];
   }
@@ -102,20 +102,50 @@ p.line = class{
       p.height/3 * p.sin(8*3.14*p.noise(this.nsY))
     ]);
 
-    while (this.aryPoints.length > _maxPoint-1) {
+    while (this.aryPoints.length > _maxPoint) {
       this.aryPoints.pop();
     }
   }
   draw() {
+    let xMin;
+    let xMax;
+    let yMin;
+    let yMax;
+
     p.stroke(this.color);
     p.strokeWeight(this.sw);
     p.push();
     p.translate(p.width/2, p.height/2);
     p.beginShape();
-    for (let i = 0; i < this.aryPoints.length; i++) {
+    for (let i = 1; i < this.aryPoints.length; i++) {
       p.curveVertex(this.aryPoints[i][0], this.aryPoints[i][1]);
+        xMin=this.aryPoints[i][0];
+        xMax=this.aryPoints[i][0];
+        yMin-this.aryPoints[i][1];
+        yMax=this.aryPoints[i][1];
+        if(this.aryPoints[i][0] < xMin){
+            xMin=this.aryPoints[i][0]
+        }
+        if(this.aryPoints[i][1] < yMin){
+            yMin=this.aryPoints[i][1]
+        }
+        if(this.aryPoints[i][0] > xMax){
+            xMax=this.aryPoints[i][0]
+        }
+        if(this.aryPoints[i][1] > yMax){
+            yMax=this.aryPoints[i][1]
+        }
     }
+
+
     p.endShape();
+
+let xMidpoint = (xMin+xMax)/2;
+  let yMidpoint = (yMin+yMax)/2;
+  
+  p.textAlign(p.CENTER, p.CENTER);
+  p.text("MIDPOINT", xMidpoint, yMidpoint);
+  p.fill(0, 102, 153);
     p.pop();
   }
 }
@@ -126,5 +156,8 @@ p.mouseRelease = function() {
     _aryObject.push(new line());
   }
 }
+
 }
+
+
 var addC1 = new p5(canvas2, 'canvas2HTML');

@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "CooperHewitt";
+  src: url("../../assets/Cooper-Hewitt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CooperHewitt";
+  src: url("../../assets/CooperHewitt-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CooperHewitt";
+  src: url("../../assets/CooperHewitt-ThinItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CooperHewittBook";
+  src: url("../../assets/CooperHewitt-Book.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.book {
+  font-family: "CooperHewittBook";
+}
+
+.cursive {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: italic;
+}
+
+.bold {
+  font-family: "CooperHewitt";
+  font-weight: 700;
+  font-style: normal;
+}
+
+#intro {
+  font-size: 100px;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: italic;
+  color: white;
+  background-color: #191919;
+}
+
+.flex {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.news {
+  background-color: #f5f5f5;
+  max-width: 50%;
+  color: #191919;
+  padding: 15px;
+  margin: 20px;
+}
+
+.blob {
+  background-color: #f5f5f5;
+  border-radius: 60% 40% 40% 20%;
+}
+
+.topgraphic {
+  top: 0;
+  position: absolute;
+}
+
+.notcanvas {
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#q1, #q2, #q3, #q4 {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: italic;
+  width: 25%;
+}
+
+p {
+  font-family: "CooperHewitt";
+  font-weight: 200;
+  font-style: italic;
+  font-size: 14pt;
+}
+
+.heading {
+  /* bottom: 0; */
+  /* float: bottom; */
+  font-family: "CooperHewitt";
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+  font-size: 30px;
+  color: white;
+  padding-bottom: 50px;
+}
+
+#subtitle {
+  font-weight: 20pt;
+}
+
+#quote {
+  float: right;
+}
+
+#questionnaire {
+  margin-top: -3px;
+}
+#questionnaire .container {
+  width: 85%;
+  min-height: 60vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+#questionnaire .container .questions-left, #questionnaire .container .questions-right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#questionnaire .container .clock-section {
+  width: 40%;
+}
+#questionnaire .question-section {
+  text-align: center;
+}
+#questionnaire .question-section .statement {
+  font-family: "CooperHewitt";
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+#questionnaire .question-section .question-section:first-of-type {
+  margin-bottom: 1em;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.clock {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock__outline {
+  height: 22em;
+  width: 22em;
+  border: 2px solid #fda5b4;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

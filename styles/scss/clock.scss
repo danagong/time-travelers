@@ -1,0 +1,57 @@
+@use 'globals' as g;
+
+.box {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+}
+// inspired by https://codepen.io/kylewetton/pen/QJbOjw
+
+// Options
+$black: #1b1e23;
+$size: 200px;
+$white: #f4eed7;
+$feature : #4b9aaa;
+
+// html,
+// body {
+//   height: 100%;
+// }
+// body {
+//   background: $black;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: sans-serif;
+//   color: white;
+// }
+
+// p {
+//   color: $white;
+//   font-size: 0.8em;
+//   opacity: 0.75;
+// }
+// 
+// 
+// 
+.clock-section {
+    // border: 1px solid red;
+}
+.clock {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__outline {
+        height: 22em;
+        width: 22em;
+        border: 2px solid g.$pink;
+        border-radius: 50%;
+  // display: flex;
+  // justify-content: center;
+  // position: relative;
+
+    }
+}

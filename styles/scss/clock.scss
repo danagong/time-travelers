@@ -1,57 +1,73 @@
 @use 'globals' as g;
+$size: 350px;
 
-.box {
-    height: 100%;
-    width: 100%;
-    background-color: red;
-    margin: 0 auto;
-}
 // inspired by https://codepen.io/kylewetton/pen/QJbOjw
-
-// Options
-$black: #1b1e23;
-$size: 200px;
-$white: #f4eed7;
-$feature : #4b9aaa;
-
-// html,
-// body {
-//   height: 100%;
-// }
-// body {
-//   background: $black;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   font-family: sans-serif;
-//   color: white;
-// }
-
-// p {
-//   color: $white;
-//   font-size: 0.8em;
-//   opacity: 0.75;
-// }
-// 
-// 
-// 
 .clock-section {
     // border: 1px solid red;
 }
+
 .clock {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     &__outline {
-        height: 22em;
-        width: 22em;
-        border: 2px solid g.$pink;
+        box-shadow: 12px 3px 6px 3px #cc99a2;
+        height: $size;
+        width: $size;
+        border: 3px solid g.$pink;
         border-radius: 50%;
-  // display: flex;
-  // justify-content: center;
-  // position: relative;
-
+        display: flex;
+        justify-content: center;
+        position: relative;
     }
+    &__second, &__minute, &__hour {
+        position: absolute;
+        left: 50%;
+        transform-origin: bottom center;
+        z-index: 2;
+        border-radius: 2px;
+    }
+    &__minute, &__hour {
+        width: 2.5px;
+    }
+    &__second {
+        width: 1.5px;
+    }
+    &__second {
+        height: ($size / 2) - 15;
+        margin-top: 15px;
+        background: g.$hotpink;
+        animation: time 60s infinite steps(60);
+        z-index: 3;
+    }
+    &__axis {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 1.5px);
+        background: g.$pink;
+        width: 7px;
+        height: 7px;
+        border-radius: 3px;
+        z-index: 4;
+    }
+    &__minute {
+        height: ($size / 2) - 25;
+        margin-top: 25px;
+        opacity: 0.75;
+        animation: time 3600s infinite steps(60);
+        background: white;
+    }
+    &__hour {
+        height: ($size / 2) - 70;
+        margin-top: 70px;
+        animation: time 43200s linear infinite;
+        background: #4c4c4c;
+      }
+}
+
+@keyframes time {
+  to {
+    transform: rotateZ(360deg);
+  }
 }

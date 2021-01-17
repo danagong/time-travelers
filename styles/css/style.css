@@ -152,13 +152,6 @@ p {
   margin-bottom: 1em;
 }
 
-.box {
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  margin: 0 auto;
-}
-
 .clock {
   height: 100%;
   display: flex;
@@ -166,10 +159,63 @@ p {
   align-items: center;
 }
 .clock__outline {
-  height: 22em;
-  width: 22em;
-  border: 2px solid #fda5b4;
+  box-shadow: 12px 3px 6px 3px #cc99a2;
+  height: 350px;
+  width: 350px;
+  border: 3px solid #fda5b4;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.clock__second, .clock__minute, .clock__hour {
+  position: absolute;
+  left: 50%;
+  transform-origin: bottom center;
+  z-index: 2;
+  border-radius: 2px;
+}
+.clock__minute, .clock__hour {
+  width: 2.5px;
+}
+.clock__second {
+  width: 1.5px;
+}
+.clock__second {
+  height: 160px;
+  margin-top: 15px;
+  background: #ff3377;
+  animation: time 60s infinite steps(60);
+  z-index: 3;
+}
+.clock__axis {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 1.5px);
+  background: #fda5b4;
+  width: 7px;
+  height: 7px;
+  border-radius: 3px;
+  z-index: 4;
+}
+.clock__minute {
+  height: 150px;
+  margin-top: 25px;
+  opacity: 0.75;
+  animation: time 3600s infinite steps(60);
+  background: white;
+}
+.clock__hour {
+  height: 105px;
+  margin-top: 70px;
+  animation: time 43200s linear infinite;
+  background: #4c4c4c;
+}
+
+@keyframes time {
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

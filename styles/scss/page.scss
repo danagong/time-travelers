@@ -107,11 +107,9 @@ p {
     .container {
         width: 85%;
         min-height: 60vh;
-        // border: 1px solid red;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
         .questions-left, .questions-right {
             width: 30%;
             display: flex;
@@ -120,8 +118,7 @@ p {
         }
         .clock-section {
             width: 40%;
-        }
-        
+        }  
     }
     
     .question-section {

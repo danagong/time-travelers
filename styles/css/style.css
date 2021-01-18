@@ -236,8 +236,8 @@ p {
   }
 }
 .spinner {
+  display: none;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -264,11 +264,11 @@ p {
 }
 .spinner .result__darken {
   font-size: 2px;
-  animation: grow 10s forwards 1s;
+  animation: grow 7s forwards;
 }
 .spinner .result__lighten {
   font-size: 65px;
-  animation: shrink 8s forwards 1s;
+  animation: shrink 6s forwards;
 }
 .spinner .circle:nth-of-type(1) {
   width: 8.3333333333%;
@@ -320,122 +320,122 @@ p {
 }
 .spinner .circle:nth-of-type(1).darken {
   border: 1px solid #fed7de;
-  animation: fadeIn 5s forwards 0.1666666667s;
+  animation: fadeIn 8s forwards 0.1666666667s;
 }
 .spinner .circle:nth-of-type(1).lighten {
   border: 1px solid #ff3377;
-  animation: fadeIn 5s forwards 2s;
+  animation: fadeIn 6s forwards 2s;
 }
 .spinner .circle:nth-of-type(2).darken {
   border: 1px solid #ffccdd;
-  animation: fadeIn 5s forwards 0.3333333333s;
+  animation: fadeIn 8s forwards 0.3333333333s;
 }
 .spinner .circle:nth-of-type(2).lighten {
   border: 1px solid #ff4d88;
-  animation: fadeIn 5s forwards 1.8333333333s;
+  animation: fadeIn 6s forwards 1.8333333333s;
 }
 .spinner .circle:nth-of-type(3).darken {
   border: 1px solid #febec9;
-  animation: fadeIn 5s forwards 0.5s;
+  animation: fadeIn 8s forwards 0.5s;
 }
 .spinner .circle:nth-of-type(3).lighten {
   border: 1px solid #d65c85;
-  animation: fadeIn 5s forwards 1.6666666667s;
+  animation: fadeIn 6s forwards 1.6666666667s;
 }
 .spinner .circle:nth-of-type(4).darken {
   border: 1px solid #fda5b4;
-  animation: fadeIn 5s forwards 0.6666666667s;
+  animation: fadeIn 8s forwards 0.6666666667s;
 }
 .spinner .circle:nth-of-type(4).lighten {
   border: 1px solid #ff6699;
-  animation: fadeIn 5s forwards 1.5s;
+  animation: fadeIn 6s forwards 1.5s;
 }
 .spinner .circle:nth-of-type(4).darken {
   border: 1.5px solid #fda5b4;
-  animation: fadeIn 5s forwards 0.6666666667s;
+  animation: fadeIn 8s forwards 0.6666666667s;
 }
 .spinner .circle:nth-of-type(4).lighten {
   border: 1.5px solid #ff6699;
-  animation: fadeIn 5s forwards 1.5s;
+  animation: fadeIn 6s forwards 1.5s;
 }
 .spinner .circle:nth-of-type(5).darken {
   border: 1.5px solid #fc8c9f;
-  animation: fadeIn 5s forwards 0.8333333333s;
+  animation: fadeIn 8s forwards 0.8333333333s;
 }
 .spinner .circle:nth-of-type(5).lighten {
   border: 1.5px solid #ff80aa;
-  animation: fadeIn 5s forwards 1.3333333333s;
+  animation: fadeIn 6s forwards 1.3333333333s;
 }
 .spinner .circle:nth-of-type(6).darken {
   border: 1.5px solid #ff80aa;
-  animation: fadeIn 5s forwards 1s;
+  animation: fadeIn 8s forwards 1s;
 }
 .spinner .circle:nth-of-type(6).lighten {
   border: 1.5px solid #fc738a;
-  animation: fadeIn 5s forwards 1.1666666667s;
+  animation: fadeIn 6s forwards 1.1666666667s;
 }
 .spinner .circle:nth-of-type(7).darken {
   border: 1.5px solid #fc738a;
-  animation: fadeIn 5s forwards 1.1666666667s;
+  animation: fadeIn 8s forwards 1.1666666667s;
 }
 .spinner .circle:nth-of-type(7).lighten {
   border: 1.5px solid #ff80aa;
-  animation: fadeIn 5s forwards 1s;
+  animation: fadeIn 6s forwards 1s;
 }
 .spinner .circle:nth-of-type(8).darken {
   border: 1.5px solid #ff80aa;
-  animation: fadeIn 5s forwards 1.3333333333s;
+  animation: fadeIn 8s forwards 1.3333333333s;
 }
 .spinner .circle:nth-of-type(8).lighten {
   border: 1.5px solid #fc8c9f;
-  animation: fadeIn 5s forwards 0.8333333333s;
+  animation: fadeIn 6s forwards 0.8333333333s;
 }
 .spinner .circle:nth-of-type(8).darken {
   border: 2px solid #ff80aa;
-  animation: fadeIn 5s forwards 1.3333333333s;
+  animation: fadeIn 8s forwards 1.3333333333s;
 }
 .spinner .circle:nth-of-type(8).lighten {
   border: 2px solid #fc8c9f;
-  animation: fadeIn 5s forwards 0.8333333333s;
+  animation: fadeIn 6s forwards 0.8333333333s;
 }
 .spinner .circle:nth-of-type(9).darken {
   border: 2px solid #ff6699;
-  animation: fadeIn 5s forwards 1.5s;
+  animation: fadeIn 8s forwards 1.5s;
 }
 .spinner .circle:nth-of-type(9).lighten {
   border: 2px solid #fda5b4;
-  animation: fadeIn 5s forwards 0.6666666667s;
+  animation: fadeIn 6s forwards 0.6666666667s;
 }
 .spinner .circle:nth-of-type(10).darken {
   border: 2px solid #d65c85;
-  animation: fadeIn 5s forwards 1.6666666667s;
+  animation: fadeIn 8s forwards 1.6666666667s;
 }
 .spinner .circle:nth-of-type(10).lighten {
   border: 2px solid #febec9;
-  animation: fadeIn 5s forwards 0.5s;
+  animation: fadeIn 6s forwards 0.5s;
 }
 .spinner .circle:nth-of-type(11).darken {
   border: 2px solid #ff4d88;
-  animation: fadeIn 5s forwards 1.8333333333s;
+  animation: fadeIn 8s forwards 1.8333333333s;
 }
 .spinner .circle:nth-of-type(11).lighten {
   border: 2px solid #ffccdd;
-  animation: fadeIn 5s forwards 0.3333333333s;
+  animation: fadeIn 6s forwards 0.3333333333s;
 }
 .spinner .circle:nth-of-type(12).darken {
   border: 2px solid #ff3377;
-  animation: fadeIn 5s forwards 2s;
+  animation: fadeIn 8s forwards 2s;
 }
 .spinner .circle:nth-of-type(12).lighten {
   border: 2px solid #fed7de;
-  animation: fadeIn 5s forwards 0.1666666667s;
+  animation: fadeIn 6s forwards 0.1666666667s;
 }
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.7;
   }
 }
 @keyframes grow {
@@ -443,12 +443,12 @@ p {
     font-size: 2px;
   }
   to {
-    font-size: 65px;
+    font-size: 55px;
   }
 }
 @keyframes shrink {
   from {
-    font-size: 65px;
+    font-size: 55px;
   }
   to {
     font-size: 15px;

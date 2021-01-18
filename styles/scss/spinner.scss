@@ -6,23 +6,20 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
 // inspired by https://codepen.io/kylewetton/pen/QJbOjw
 
 .spinner {
+    display: none;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     &__outline {
-        // box-shadow: 12px 3px 6px 3px #cc99a2;
         position: absolute;
         height: $size;
         width: $size;
-        // border: 3px solid g.$pink;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .circle {
-        // border: 2px solid g.$hotpink;
         position: absolute;
         border-radius: 50%;
         display: flex;
@@ -35,21 +32,21 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
         text-align: center;
         &__darken {
             font-size: 2px;
-            animation: grow 10s forwards 1s;
+            animation: grow 7s forwards;
         }
         &__lighten {
             font-size: 65px;
-            animation: shrink 8s forwards 1s;
+            animation: shrink 6s forwards;
         }
     }
     @mixin growthDirection($width, $i) {
         &.darken {
             border: $width solid nth($colors, $i);
-            animation: fadeIn 5s forwards #{$i/6}s;
+            animation: fadeIn 8s forwards #{$i/6}s;
         }
         &.lighten {
             border: $width solid nth($colors, 13 - $i);
-            animation: fadeIn 5s forwards #{(13 - $i)/6}s;
+            animation: fadeIn 6s forwards #{(13 - $i)/6}s;
         }   
     }
 
@@ -83,7 +80,7 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
             opacity: 0;
         }
         to {
-            opacity: 1;
+            opacity: 0.7;
         }
     }
     @keyframes grow {
@@ -92,12 +89,12 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
         }
 
         to {
-            font-size: 65px;
+            font-size: 55px;
         }
     }
     @keyframes shrink {
         from {
-            font-size: 65px;
+            font-size: 55px;
         }
 
         to {

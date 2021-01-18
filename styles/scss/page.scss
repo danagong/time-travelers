@@ -13,15 +13,6 @@
     @include cursive;
 }
 
-@mixin bold {
-    font-family: 'CooperHewitt';
-    font-weight: 700;
-    font-style: normal;
-}
-
-.bold {
-    @include bold;
-}
 
 #intro {
     font-size: 100px;
@@ -81,7 +72,7 @@ p {
 .heading {
     /* bottom: 0; */
     /* float: bottom; */
-    @include bold;
+    @include g.bold;
     text-align: left;
     font-size: 30px;;
     color: white;

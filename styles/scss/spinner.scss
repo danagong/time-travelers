@@ -29,7 +29,18 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
         justify-content: center;
         align-items: center;
         opacity: 0;
-        
+    }
+    .result {
+        position: absolute;
+        text-align: center;
+        &__darken {
+            font-size: 2px;
+            animation: grow 10s forwards 1s;
+        }
+        &__lighten {
+            font-size: 65px;
+            animation: shrink 8s forwards 1s;
+        }
     }
     @mixin growthDirection($width, $i) {
         &.darken {
@@ -49,15 +60,21 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
         }
     }
 
-    @for $i from 1 through 6 {
+    @for $i from 1 through 4 {
+        .circle:nth-of-type(#{$i}) {
+            @include growthDirection(1px, $i);
+        }
+    }
+
+    @for $i from 4 through 8 {
         .circle:nth-of-type(#{$i}) {
             @include growthDirection(1.5px, $i);
         }
     }
 
-    @for $i from 7 through 12 {
+    @for $i from 8 through 12 {
         .circle:nth-of-type(#{$i}) {
-            @include growthDirection(2.5px, $i);
+            @include growthDirection(2px, $i);
         }
     }
 
@@ -67,6 +84,24 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
         }
         to {
             opacity: 1;
+        }
+    }
+    @keyframes grow {
+        from {
+            font-size: 2px;
+        }
+
+        to {
+            font-size: 65px;
+        }
+    }
+    @keyframes shrink {
+        from {
+            font-size: 65px;
+        }
+
+        to {
+            font-size: 15px;
         }
     }
 }   

@@ -32,12 +32,6 @@
   font-style: italic;
 }
 
-.bold {
-  font-family: "CooperHewitt";
-  font-weight: 700;
-  font-style: normal;
-}
-
 #intro {
   font-size: 100px;
   position: relative;
@@ -264,6 +258,18 @@ p {
   align-items: center;
   opacity: 0;
 }
+.spinner .result {
+  position: absolute;
+  text-align: center;
+}
+.spinner .result__darken {
+  font-size: 2px;
+  animation: grow 10s forwards 1s;
+}
+.spinner .result__lighten {
+  font-size: 65px;
+  animation: shrink 8s forwards 1s;
+}
 .spinner .circle:nth-of-type(1) {
   width: 8.3333333333%;
   height: 8.3333333333%;
@@ -313,28 +319,36 @@ p {
   height: 100%;
 }
 .spinner .circle:nth-of-type(1).darken {
-  border: 1.5px solid #fed7de;
+  border: 1px solid #fed7de;
   animation: fadeIn 5s forwards 0.1666666667s;
 }
 .spinner .circle:nth-of-type(1).lighten {
-  border: 1.5px solid #ff3377;
+  border: 1px solid #ff3377;
   animation: fadeIn 5s forwards 2s;
 }
 .spinner .circle:nth-of-type(2).darken {
-  border: 1.5px solid #ffccdd;
+  border: 1px solid #ffccdd;
   animation: fadeIn 5s forwards 0.3333333333s;
 }
 .spinner .circle:nth-of-type(2).lighten {
-  border: 1.5px solid #ff4d88;
+  border: 1px solid #ff4d88;
   animation: fadeIn 5s forwards 1.8333333333s;
 }
 .spinner .circle:nth-of-type(3).darken {
-  border: 1.5px solid #febec9;
+  border: 1px solid #febec9;
   animation: fadeIn 5s forwards 0.5s;
 }
 .spinner .circle:nth-of-type(3).lighten {
-  border: 1.5px solid #d65c85;
+  border: 1px solid #d65c85;
   animation: fadeIn 5s forwards 1.6666666667s;
+}
+.spinner .circle:nth-of-type(4).darken {
+  border: 1px solid #fda5b4;
+  animation: fadeIn 5s forwards 0.6666666667s;
+}
+.spinner .circle:nth-of-type(4).lighten {
+  border: 1px solid #ff6699;
+  animation: fadeIn 5s forwards 1.5s;
 }
 .spinner .circle:nth-of-type(4).darken {
   border: 1.5px solid #fda5b4;
@@ -361,51 +375,59 @@ p {
   animation: fadeIn 5s forwards 1.1666666667s;
 }
 .spinner .circle:nth-of-type(7).darken {
-  border: 2.5px solid #fc738a;
+  border: 1.5px solid #fc738a;
   animation: fadeIn 5s forwards 1.1666666667s;
 }
 .spinner .circle:nth-of-type(7).lighten {
-  border: 2.5px solid #ff80aa;
+  border: 1.5px solid #ff80aa;
   animation: fadeIn 5s forwards 1s;
 }
 .spinner .circle:nth-of-type(8).darken {
-  border: 2.5px solid #ff80aa;
+  border: 1.5px solid #ff80aa;
   animation: fadeIn 5s forwards 1.3333333333s;
 }
 .spinner .circle:nth-of-type(8).lighten {
-  border: 2.5px solid #fc8c9f;
+  border: 1.5px solid #fc8c9f;
+  animation: fadeIn 5s forwards 0.8333333333s;
+}
+.spinner .circle:nth-of-type(8).darken {
+  border: 2px solid #ff80aa;
+  animation: fadeIn 5s forwards 1.3333333333s;
+}
+.spinner .circle:nth-of-type(8).lighten {
+  border: 2px solid #fc8c9f;
   animation: fadeIn 5s forwards 0.8333333333s;
 }
 .spinner .circle:nth-of-type(9).darken {
-  border: 2.5px solid #ff6699;
+  border: 2px solid #ff6699;
   animation: fadeIn 5s forwards 1.5s;
 }
 .spinner .circle:nth-of-type(9).lighten {
-  border: 2.5px solid #fda5b4;
+  border: 2px solid #fda5b4;
   animation: fadeIn 5s forwards 0.6666666667s;
 }
 .spinner .circle:nth-of-type(10).darken {
-  border: 2.5px solid #d65c85;
+  border: 2px solid #d65c85;
   animation: fadeIn 5s forwards 1.6666666667s;
 }
 .spinner .circle:nth-of-type(10).lighten {
-  border: 2.5px solid #febec9;
+  border: 2px solid #febec9;
   animation: fadeIn 5s forwards 0.5s;
 }
 .spinner .circle:nth-of-type(11).darken {
-  border: 2.5px solid #ff4d88;
+  border: 2px solid #ff4d88;
   animation: fadeIn 5s forwards 1.8333333333s;
 }
 .spinner .circle:nth-of-type(11).lighten {
-  border: 2.5px solid #ffccdd;
+  border: 2px solid #ffccdd;
   animation: fadeIn 5s forwards 0.3333333333s;
 }
 .spinner .circle:nth-of-type(12).darken {
-  border: 2.5px solid #ff3377;
+  border: 2px solid #ff3377;
   animation: fadeIn 5s forwards 2s;
 }
 .spinner .circle:nth-of-type(12).lighten {
-  border: 2.5px solid #fed7de;
+  border: 2px solid #fed7de;
   animation: fadeIn 5s forwards 0.1666666667s;
 }
 @keyframes fadeIn {
@@ -414,6 +436,22 @@ p {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    font-size: 2px;
+  }
+  to {
+    font-size: 65px;
+  }
+}
+@keyframes shrink {
+  from {
+    font-size: 65px;
+  }
+  to {
+    font-size: 15px;
   }
 }
 

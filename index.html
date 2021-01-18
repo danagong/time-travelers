@@ -6,49 +6,124 @@
         <script src="js/frag_functions_default.js" type="text/javascript"></script>
         <script src="js/frag.js" type="text/javascript"></script>
         <script src="js/vert.js" type="text/javascript"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/glitch.css">
+        <link rel="stylesheet" type="text/css" href="styles/css/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/css/glitch.css">
     </head>
 <body>
-    <div id= "canvas1HTML">
-
-    </div> <br>
+    <div id= "canvas1HTML"></div> 
+    <br>
     <div class = "notcanvas">
-     <div class = "heading">
+       <div class = "heading">
         <h1>TIME TRAVELERS</h1>
         <div>
             <h3 class ="cursive"> our perception of time</h3>
             <div>
-            <p> "Time travelers: a cliche term in popular culture which we appropriated to mean people literally travelling in different speeds and points in time."
-            <p class = "cursive" id= "quote">- Taeyoon Choi, School of Poetic Computation.</p>
+                <p> "Time travelers: a cliche term in popular culture which we appropriated to mean people literally travelling in different speeds and points in time."
+                    <p class = "cursive" id= "quote">- Taeyoon Choi, School of Poetic Computation.</p>
+                </div>
+
+            </div>
+
         </div>
-    
-    </div>
-
-    </div>
 
 
-     <!--The Questionnaire Section-->
-     <div class="section nav-section" id="section2" style="margin-top: -3px;">
-        <p class="book"> How much do you agree with the following statements.</p>
-        <div></div>
-        <div class="row">
-            <div class="col-md-3" id="q1" style="padding-right: 40px;" data-aos="fade-in"></div>
-            <div class="col-md-3" id="q2" style="padding-left: 40px; padding-right: 40px;" data-aos="fade-in"></div>
-            <div class="col-md-3" id="q3" style="padding-left: 40px; padding-right: 40px;" data-aos="fade-in"></div>
-            <div class="col-md-3" id="q4" style="padding-left: 40px;" data-aos="fade-in"></div>
+        <!--The Questionnaire Section-->
+        <div class="section nav-section" id="questionnaire">
+            <div class="top">
+                <p class="book">Your Understanding of Time:</p>
+                <a id="start">begin</a>
+            </div>
+            <p class="leadin book"> How much do you agree with the following statements:</p>
+            <div class="container">
+                <div class="questions-left">
+                   <div id="q-1" class="question-section">
+                    <p class="statement">time is money</p>
+                    <p class="answer"></p>
+                    <div class="choices">
+                        <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                            <label for="strongly">Strongly Agree</label>
+                            <input type="radio" name="agreement" id="neutral" value="2">
+                            <label for="neutral">Neutral</label>
+                        </div>
+                        <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                            <label for="slightly">Slightly Agree</label>
+                            <input type="radio" name="agreement" id="disagree" value="3">
+                            <label for="disagree">Disagree</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="q-3" class="question-section">
+                    <p class="statement">silence is uncomfortable</p>
+                    <p class="answer"></p>
+                    <div class="choices">
+                        <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                            <label for="strongly">Strongly Agree</label>
+                            <input type="radio" name="agreement" id="neutral" value="2">
+                            <label for="neutral">Neutral</label>
+                        </div>
+                        <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                            <label for="slightly">Slightly Agree</label>
+                            <input type="radio" name="agreement" id="disagree" value="3">
+                            <label for="disagree">Disagree</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clock-section">
+                    <div class="clock">
+                      <div class="clock__outline-outer">
+                         <div class="clock__outline">
+                          <div class="clock__second"></div>
+                          <div class="clock__minute"></div>
+                          <div class="clock__hour"></div>
+                          <div class="clock__axis"></div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="spinner"></div>
         </div>
-        <div style="height:200px;"></div>
-        <div style="height:400px">
-            <div id="questionaire"></div>
+        <div class="questions-right">
+            <div id="q-2" class="question-section">
+                <p class="statement">you would rather be late for your next meeting than cut the flow of your current discussion</p>
+                <p class="answer"></p>
+                <div class="choices">
+                    <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                        <label for="strongly">Strongly Agree</label>
+                        <input type="radio" name="agreement" id="neutral" value="2">
+                        <label for="neutral">Neutral</label>
+                    </div>
+                    <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                        <label for="slightly">Slightly Agree</label>
+                        <input type="radio" name="agreement" id="disagree" value="3">
+                        <label for="disagree">Disagree</label>
+                    </div>
+                </div>
+            </div>
+            <div id="q-4" class="question-section">
+                <p class="statement">time is measured by the clock</p>
+                <p class="answer"></p>
+                <div class="choices">
+                    <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                        <label for="strongly">Strongly Agree</label>
+                        <input type="radio" name="agreement" id="neutral" value="2">
+                        <label for="neutral">Neutral</label>
+                    </div>
+                    <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                        <label for="slightly">Slightly Agree</label>
+                        <input type="radio" name="agreement" id="disagree" value="3">
+                        <label for="disagree">Disagree</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div>
-        <p id="intro"> The concept of</p>
-        <p class="glitch" data-text="Time."> Time.</p>
-        <div class ="flex">
+
+<div>
+    <p id="intro"> The concept of</p>
+    <p class="glitch" data-text="Time."> Time.</p>
+    <div class ="flex">
         <p class="book news" style="max-width:350px"> 
             There is no greater terror in this world than time, flitting about, 
             just out of vision and reach, one may flee to the ends of the world to avoid its presence, 
@@ -63,7 +138,7 @@
             else ebbs and flows around us, time will remain constant, ticking an inexorable march forward. 
         </p>
 
-        <p class="book news " style="max-width:350px;">
+        <p class="book news" style="max-width:350px;">
             However, looking into anywhere but the present, we would come to the realization that time, 
             at least as we know it, was (and presumably still is) anything but a neutral construct. 
             We may live by time, depend on it, and even come to be enslaved by it, but the reassurance of 
@@ -82,19 +157,13 @@
             and hours to days, what is time? Is it an abstract toy of science? A gold inlaid toy of 
             dilettants manufactured by the swiss, or something else altogether? 
         </p>
-    
-        
-    </div>
-    
-        
+
+
     </div>
 </div>
+</div>
 <div id= "canvas2HTML"></div>
-    
-      <!-- Vis JS -->
-
-    <script src="js/questionaire.js"></script>
-    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="js/questionnaire.js"></script>
 </body>
-
 </html>

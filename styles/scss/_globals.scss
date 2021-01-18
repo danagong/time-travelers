@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "CooperHewitt";
+    src: url("../../assets/Cooper-Hewitt.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CooperHewitt";
+    src: url("../../assets/CooperHewitt-Bold.otf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CooperHewitt";
+    src: url("../../assets/CooperHewitt-ThinItalic.otf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "CooperHewittBook";
+    src: url("../../assets/CooperHewitt-Book.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin cursive {
+    font-family: 'CooperHewitt';
+    font-weight: 200;
+    font-style: italic;
+}
+@mixin bold {
+    font-family: 'CooperHewitt';
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+$pink: #fda5b4;
+$hotpink: #ff3377;

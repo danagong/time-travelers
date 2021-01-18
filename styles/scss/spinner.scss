@@ -1,0 +1,76 @@
+@use 'globals' as g;
+$size: 350px;
+$colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a, 
+#ff80aa, #ff6699, #d65c85, #ff4d88,  #ff3377;
+
+// inspired by https://codepen.io/kylewetton/pen/QJbOjw
+
+.spinner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__outline {
+        // box-shadow: 12px 3px 6px 3px #cc99a2;
+        position: absolute;
+        height: $size;
+        width: $size;
+        // border: 3px solid g.$pink;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle {
+        // border: 2px solid g.$hotpink;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        
+    }
+    @mixin growthDirection($width, $i) {
+        &.darken {
+            border: $width solid nth($colors, $i);
+            animation: fadeIn 5s forwards #{$i/6}s;
+        }
+        &.lighten {
+            border: $width solid nth($colors, 13 - $i);
+            animation: fadeIn 5s forwards #{(13 - $i)/6}s;
+        }   
+    }
+
+    @for $i from 1 through 12 {
+        .circle:nth-of-type(#{$i}) {
+            width: ($i/12) * 100%;
+            height: ($i/12) * 100%;
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .circle:nth-of-type(#{$i}) {
+            @include growthDirection(1.5px, $i);
+        }
+    }
+
+    @for $i from 7 through 12 {
+        .circle:nth-of-type(#{$i}) {
+            @include growthDirection(2.5px, $i);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}   
+
+
+
+

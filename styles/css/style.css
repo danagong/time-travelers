@@ -241,5 +241,180 @@ p {
     transform: rotateZ(360deg);
   }
 }
+.spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner__outline {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner .circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.spinner .circle:nth-of-type(1) {
+  width: 8.3333333333%;
+  height: 8.3333333333%;
+}
+.spinner .circle:nth-of-type(2) {
+  width: 16.6666666667%;
+  height: 16.6666666667%;
+}
+.spinner .circle:nth-of-type(3) {
+  width: 25%;
+  height: 25%;
+}
+.spinner .circle:nth-of-type(4) {
+  width: 33.3333333333%;
+  height: 33.3333333333%;
+}
+.spinner .circle:nth-of-type(5) {
+  width: 41.6666666667%;
+  height: 41.6666666667%;
+}
+.spinner .circle:nth-of-type(6) {
+  width: 50%;
+  height: 50%;
+}
+.spinner .circle:nth-of-type(7) {
+  width: 58.3333333333%;
+  height: 58.3333333333%;
+}
+.spinner .circle:nth-of-type(8) {
+  width: 66.6666666667%;
+  height: 66.6666666667%;
+}
+.spinner .circle:nth-of-type(9) {
+  width: 75%;
+  height: 75%;
+}
+.spinner .circle:nth-of-type(10) {
+  width: 83.3333333333%;
+  height: 83.3333333333%;
+}
+.spinner .circle:nth-of-type(11) {
+  width: 91.6666666667%;
+  height: 91.6666666667%;
+}
+.spinner .circle:nth-of-type(12) {
+  width: 100%;
+  height: 100%;
+}
+.spinner .circle:nth-of-type(1).darken {
+  border: 1.5px solid #fed7de;
+  animation: fadeIn 5s forwards 0.1666666667s;
+}
+.spinner .circle:nth-of-type(1).lighten {
+  border: 1.5px solid #ff3377;
+  animation: fadeIn 5s forwards 2s;
+}
+.spinner .circle:nth-of-type(2).darken {
+  border: 1.5px solid #ffccdd;
+  animation: fadeIn 5s forwards 0.3333333333s;
+}
+.spinner .circle:nth-of-type(2).lighten {
+  border: 1.5px solid #ff4d88;
+  animation: fadeIn 5s forwards 1.8333333333s;
+}
+.spinner .circle:nth-of-type(3).darken {
+  border: 1.5px solid #febec9;
+  animation: fadeIn 5s forwards 0.5s;
+}
+.spinner .circle:nth-of-type(3).lighten {
+  border: 1.5px solid #d65c85;
+  animation: fadeIn 5s forwards 1.6666666667s;
+}
+.spinner .circle:nth-of-type(4).darken {
+  border: 1.5px solid #fda5b4;
+  animation: fadeIn 5s forwards 0.6666666667s;
+}
+.spinner .circle:nth-of-type(4).lighten {
+  border: 1.5px solid #ff6699;
+  animation: fadeIn 5s forwards 1.5s;
+}
+.spinner .circle:nth-of-type(5).darken {
+  border: 1.5px solid #fc8c9f;
+  animation: fadeIn 5s forwards 0.8333333333s;
+}
+.spinner .circle:nth-of-type(5).lighten {
+  border: 1.5px solid #ff80aa;
+  animation: fadeIn 5s forwards 1.3333333333s;
+}
+.spinner .circle:nth-of-type(6).darken {
+  border: 1.5px solid #ff80aa;
+  animation: fadeIn 5s forwards 1s;
+}
+.spinner .circle:nth-of-type(6).lighten {
+  border: 1.5px solid #fc738a;
+  animation: fadeIn 5s forwards 1.1666666667s;
+}
+.spinner .circle:nth-of-type(7).darken {
+  border: 2.5px solid #fc738a;
+  animation: fadeIn 5s forwards 1.1666666667s;
+}
+.spinner .circle:nth-of-type(7).lighten {
+  border: 2.5px solid #ff80aa;
+  animation: fadeIn 5s forwards 1s;
+}
+.spinner .circle:nth-of-type(8).darken {
+  border: 2.5px solid #ff80aa;
+  animation: fadeIn 5s forwards 1.3333333333s;
+}
+.spinner .circle:nth-of-type(8).lighten {
+  border: 2.5px solid #fc8c9f;
+  animation: fadeIn 5s forwards 0.8333333333s;
+}
+.spinner .circle:nth-of-type(9).darken {
+  border: 2.5px solid #ff6699;
+  animation: fadeIn 5s forwards 1.5s;
+}
+.spinner .circle:nth-of-type(9).lighten {
+  border: 2.5px solid #fda5b4;
+  animation: fadeIn 5s forwards 0.6666666667s;
+}
+.spinner .circle:nth-of-type(10).darken {
+  border: 2.5px solid #d65c85;
+  animation: fadeIn 5s forwards 1.6666666667s;
+}
+.spinner .circle:nth-of-type(10).lighten {
+  border: 2.5px solid #febec9;
+  animation: fadeIn 5s forwards 0.5s;
+}
+.spinner .circle:nth-of-type(11).darken {
+  border: 2.5px solid #ff4d88;
+  animation: fadeIn 5s forwards 1.8333333333s;
+}
+.spinner .circle:nth-of-type(11).lighten {
+  border: 2.5px solid #ffccdd;
+  animation: fadeIn 5s forwards 0.3333333333s;
+}
+.spinner .circle:nth-of-type(12).darken {
+  border: 2.5px solid #ff3377;
+  animation: fadeIn 5s forwards 2s;
+}
+.spinner .circle:nth-of-type(12).lighten {
+  border: 2.5px solid #fed7de;
+  animation: fadeIn 5s forwards 0.1666666667s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

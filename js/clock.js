@@ -14,7 +14,7 @@ function getTimes(s, m, h) {
 
 
 $(document).ready(function() {
-
+  $(".circle").addClass("darken");
   getTimes(now.getSeconds(), 60 * now.getMinutes(), 3600 * now.getHours());
 
   $("#start").click(function() {
@@ -38,3 +38,8 @@ $(document).ready(function() {
     
   });
 });
+
+
+function generateSpinner() {
+
+}

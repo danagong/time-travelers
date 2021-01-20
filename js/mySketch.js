@@ -3,8 +3,7 @@
 
 
 var canvas1 = function(p){
-
-
+	
 let theShader;
 
 p.preload = function(){
@@ -14,10 +13,8 @@ p.preload = function(){
 let drawingGraphics
 let WebglGraphics
 p.setup = function() {
-	
-	
 	p.createCanvas(p.windowWidth,1000);
-	p.background(p.CMYK, 0, 0, 0, 90);
+	p.background(25,25,25);
 	
 
 	p.noStroke();
@@ -29,8 +26,8 @@ p.setup = function() {
 }
 
 p.draw = function() {
-	p.clear();
-  p.background(p.CMYK, 0, 0, 0, 90);
+  p.clear();
+  p.background(25,25,25);
 	WebglGraphics.shader(theShader)
 	theShader.setUniform('u_resolution',[p.width/1000,p.height/1000])
 	theShader.setUniform('u_time',p.millis()/10000)
@@ -50,7 +47,7 @@ p.draw = function() {
 	}
 		
 		// drawingGraphics.noFill()
-	for(var i=00;i<800;i+=200){
+	for(var i=0;i<800;i+=200){
 		drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
 	}
 	drawingGraphics.pop()

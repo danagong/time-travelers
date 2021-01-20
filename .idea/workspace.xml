@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ad2e5d0-3edc-4a3e-9368-d510cce3328f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/concept.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/warp-grid-background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bubblesformer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/bubbles.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bubbles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/mySketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mySketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +38,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611178882584</updated>
-      <workItem from="1611178883649" duration="387000" />
+      <workItem from="1611178883649" duration="472000" />
     </task>
     <servers />
   </component>

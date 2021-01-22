@@ -29,8 +29,9 @@
 
 .glitch-container{
   float: right;
-  margin-top: 380px;
+  margin-top: 230px;
   margin-right: 100px;
+
 }
 .book {
   font-family: "CooperHewittBook";
@@ -50,10 +51,8 @@
 #intro {
   font-size: 100px;
   position: relative;
-  width: 60%;
   margin-left: 20px;
-  margin: 0 auto;
-  margin-top: -100px;
+  margin-top: -200px;
 }
 
 
@@ -61,7 +60,7 @@ body {
   font-family: "CooperHewitt";
   font-weight: 200;
   font-style: italic;
-  color: white;
+  color: #D3D3D3;
   background-color: black;
 }
 
@@ -81,6 +80,7 @@ body {
 #concept{
   max-width: 100%;
   z-index: 1;
+  margin-top: -160px;
   position: absolute;
 }
 .topgraphic {
@@ -102,6 +102,7 @@ body {
   font-weight: 700;
   font-style: normal;
   width: 25%;
+  color: #D3D3D3;
 }
 
 p {
@@ -109,6 +110,11 @@ p {
   font-weight: 200;
   font-style: italic;
   font-size: 14pt;
+  color: #D3D3D3;
+}
+
+h1{
+  color: #D3D3D3;
 }
 
 .heading {

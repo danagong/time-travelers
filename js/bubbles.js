@@ -32,7 +32,7 @@ p.setup = function()  {
 p.draw = function() {
   p.clear();
   p.blendMode(p.HARD_LIGHT);
-  p.background(p.CMYK, 0, 0, 0, 90);
+  p.background(25, 25, 25);
 
   WebglGraphics.shader(theShader)
 	theShader.setUniform('u_resolution',[p.width/1000,p.height/2600])

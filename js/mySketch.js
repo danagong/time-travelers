@@ -49,9 +49,9 @@ p.draw = function() {
 	}
 		
 		// drawingGraphics.noFill()
-	for(var i=0;i<800;i+=200){
-		drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
-	}
+		//for(var i=0;i<800;i+=200){
+			//drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
+		//}
 	drawingGraphics.pop()
 	
 	drawingGraphics.push()

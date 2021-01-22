@@ -3,8 +3,7 @@
 
 
 var canvas1 = function(p){
-
-
+	
 let theShader;
 
 p.preload = function(){
@@ -50,7 +49,7 @@ p.draw = function() {
 	}
 		
 		// drawingGraphics.noFill()
-	for(var i=00;i<800;i+=200){
+	for(var i=0;i<800;i+=200){
 		drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
 	}
 	drawingGraphics.pop()

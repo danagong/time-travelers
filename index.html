@@ -1,42 +1,37 @@
 <html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js" type="text/javascript"></script>
-        <script src="js/mySketch.js" type="text/javascript"></script>
-    
-        <script src="js/frag_functions_default.js" type="text/javascript"></script>
-        <script src="js/frag.js" type="text/javascript"></script>
-        <script src="js/vert.js" type="text/javascript"></script>
-        <link rel="stylesheet" type="text/css" href="styles/css/style.css">
-        <link rel="stylesheet" type="text/css" href="styles/css/glitch.css">
-    </head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js" type="text/javascript"></script>
+    <!--        <script src="js/mySketch.js" type="text/javascript"></script>-->
+    <script src="js/frag_functions_default.js" type="text/javascript"></script>
+    <script src="js/frag.js" type="text/javascript"></script>
+    <script src="js/vert.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/css/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/glitch.css">
+</head>
 <body>
-    <div id= "canvas1HTML"></div> 
-    <br>
-    <div class = "notcanvas">
-       <div class = "heading">
+<div id= "canvas1HTML"></div>
+<br>
+<div class = "notcanvas">
+    <div class = "heading">
         <h1>TIME TRAVELERS</h1>
         <div>
             <h3 class ="cursive"> our perception of time</h3>
             <div>
                 <p> "Time travelers: a cliche term in popular culture which we appropriated to mean people literally travelling in different speeds and points in time."
-                    <p class = "cursive" id= "quote">- Taeyoon Choi, School of Poetic Computation.</p>
-                </div>
-
+                <p class = "cursive" id= "quote">- Taeyoon Choi, School of Poetic Computation.</p>
             </div>
-
         </div>
-
-
-        <!--The Questionnaire Section-->
-        <div class="section nav-section" id="questionnaire">
-            <div class="top">
-                <p class="book">Your Understanding of Time:</p>
-                <a id="start">begin</a>
-            </div>
-            <p class="leadin book"> How much do you agree with the following statements:</p>
-            <div class="container">
-                <div class="questions-left">
-                   <div id="q-1" class="question-section">
+    </div>
+    <!--The Questionnaire Section-->
+    <div class="section nav-section" id="questionnaire">
+        <div class="top">
+            <p class="book">Your Understanding of Time:</p>
+            <a id="start">begin</a>
+        </div>
+        <p class="leadin book"> How much do you agree with the following statements:</p>
+        <div class="container">
+            <div class="questions-left">
+                <div id="q-1" class="question-section">
                     <p class="statement">time is money</p>
                     <p class="answer"></p>
                     <div class="choices">
@@ -52,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="q-3" class="question-section">
+                <div id="q-4" class="question-section">
                     <p class="statement">silence is uncomfortable</p>
                     <p class="answer"></p>
                     <div class="choices">
@@ -70,70 +65,66 @@
                 </div>
             </div>
             <div class="clock-section">
-                    <div class="clock">
-                      <div class="clock__outline-outer">
-                         <div class="clock__outline">
-                          <div class="clock__second"></div>
-                          <div class="clock__minute"></div>
-                          <div class="clock__hour"></div>
-                          <div class="clock__axis"></div>
-                      </div>
-                      </div>
-                  </div>
-                  <div class="spinner"></div>
-        </div>
-        <div class="questions-right">
-            <div id="q-2" class="question-section">
-                <p class="statement">you would rather be late for your next meeting than cut the flow of your current discussion</p>
-                <p class="answer"></p>
-                <div class="choices">
-                    <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
-                        <label for="strongly">Strongly Agree</label>
-                        <input type="radio" name="agreement" id="neutral" value="2">
-                        <label for="neutral">Neutral</label>
-                    </div>
-                    <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
-                        <label for="slightly">Slightly Agree</label>
-                        <input type="radio" name="agreement" id="disagree" value="3">
-                        <label for="disagree">Disagree</label>
+                <div class="clock">
+                    <div class="clock__outline-outer">
+                        <div class="clock__outline">
+                            <div class="clock__second"></div>
+                            <div class="clock__minute"></div>
+                            <div class="clock__hour"></div>
+                            <div class="clock__axis"></div>
+                        </div>
                     </div>
                 </div>
+                <div class="spinner"></div>
             </div>
-            <div id="q-4" class="question-section">
-                <p class="statement">time is measured by the clock</p>
-                <p class="answer"></p>
-                <div class="choices">
-                    <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
-                        <label for="strongly">Strongly Agree</label>
-                        <input type="radio" name="agreement" id="neutral" value="2">
-                        <label for="neutral">Neutral</label>
+            <div class="questions-right">
+                <div id="q-2" class="question-section">
+                    <p class="statement">you would rather be late for your next meeting than cut the flow of your current discussion</p>
+                    <p class="answer"></p>
+                    <div class="choices">
+                        <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                            <label for="strongly">Strongly Agree</label>
+                            <input type="radio" name="agreement" id="neutral" value="2">
+                            <label for="neutral">Neutral</label>
+                        </div>
+                        <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                            <label for="slightly">Slightly Agree</label>
+                            <input type="radio" name="agreement" id="disagree" value="3">
+                            <label for="disagree">Disagree</label>
+                        </div>
                     </div>
-                    <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
-                        <label for="slightly">Slightly Agree</label>
-                        <input type="radio" name="agreement" id="disagree" value="3">
-                        <label for="disagree">Disagree</label>
+                </div>
+                <div id="q-3" class="question-section">
+                    <p class="statement">time is measured by the clock</p>
+                    <p class="answer"></p>
+                    <div class="choices">
+                        <div class="choice-group"><input type="radio" name="agreement" id="strongly" value="0">
+                            <label for="strongly">Strongly Agree</label>
+                            <input type="radio" name="agreement" id="neutral" value="2">
+                            <label for="neutral">Neutral</label>
+                        </div>
+                        <div class="choice-group"><input type="radio" name="agreement" id="slightly" value="1">
+                            <label for="slightly">Slightly Agree</label>
+                            <input type="radio" name="agreement" id="disagree" value="3">
+                            <label for="disagree">Disagree</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-<div class="intro">
-    <img id ="concept" src="img/concept.png">
- <div class="glitch-container">
-    <p class="glitch bold" data-text="Time."> Time.</p>
-</div>
-<div>
-       
-        <img class ="grid" src="img/warp-grid-background.png">
+    <div class="intro">
+        <
+<!--        <img id ="concept" src="img/concept.png">-->
+<!--        <div class="glitch-container">-->
+<!--            <p class="glitch bold" data-text="Time."> Time.</p>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <img class="grid" src="img/warp-grid-background.png">-->
+<!--        </div>-->
     </div>
 </div>
-</div>
-
 <div  id= "canvas2HTML"></div>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="js/questionnaire.js"></script>
 </body>

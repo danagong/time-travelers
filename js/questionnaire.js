@@ -1,7 +1,7 @@
 let now = new Date();
 let current = "1";
 let score = 0;
-let positions = [[50, 60 * 51, 3600 * 10], [10, 60 * 11, 3600 * 2], [36, 60 * 39, 3600 * 8], [13, 60 * 19, 3600 * 4]];
+let positions = [[50, 60 * 51, 3600 * 10], [10, 60 * 11, 3600 * 2], [13, 60 * 19, 3600 * 4], [36, 60 * 39, 3600 * 8]];
 
 function setTime(left, hand) {
   $(".clock__" + hand).css("animation-delay", "" + left * -1 + "s");
@@ -59,6 +59,8 @@ $(document).ready(function() {
          result = "TIME MOVES TOWARDS YOU";
         $(".result").addClass("result__darken");
       }
+      $(".question-section").css("opacity","0.2");
+      $(".leadin").css("display", "none");
        setTimeout(function(){
         $(".result").text(result);
       }, 1000);
@@ -67,7 +69,6 @@ $(document).ready(function() {
       setTimeout(function(){
       $(".clock__second").removeClass("spin");
       $("#q-" + current).show();
-      $("#af").text(current);
       getTimes(positions[current-1][0], positions[current-1][1], positions[current-1][2]);
     }, 1000);
     }  

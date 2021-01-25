@@ -5,7 +5,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "CooperHewittBold";
+  font-family: "CooperHewitt";
   src: url("../../assets/CooperHewitt-Bold.otf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -22,22 +22,9 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
-.glitch-container{
-  float: right;
-  margin-top: 230px;
-  margin-right: 100px;
-
-}
 .book {
   font-family: "CooperHewittBook";
 }
-
-.bold{
-  font-family: "CooperHewittBold";
-}
-
 
 .cursive {
   font-family: "CooperHewitt";
@@ -45,19 +32,11 @@
   font-style: italic;
 }
 
-#intro {
-  font-size: 100px;
-  position: relative;
-  margin-left: 20px;
-  margin-top: -200px;
-}
-
-
 body {
   font-family: "CooperHewitt";
   font-weight: 200;
   font-style: italic;
-  color: #D3D3D3;
+  color: white;
   background-color: black;
 }
 
@@ -66,20 +45,19 @@ body {
   flex-direction: horizontal;
 }
 
-
-
-.grid{
-  max-width: 100%;
-  max-height: 100%;
-  z-index: -3;
- 
+.news {
+  background-color: #f5f5f5;
+  max-width: 50%;
+  color: #191919;
+  padding: 15px;
+  margin: 20px;
 }
-#concept{
-  max-width: 100%;
-  z-index: 1;
-  margin-top: -160px;
-  position: absolute;
+
+.blob {
+  background-color: #f5f5f5;
+  border-radius: 60% 40% 40% 20%;
 }
+
 .topgraphic {
   top: 0;
   position: absolute;
@@ -99,7 +77,6 @@ body {
   font-weight: 700;
   font-style: normal;
   width: 25%;
-  color: #D3D3D3;
 }
 
 p {
@@ -107,11 +84,6 @@ p {
   font-weight: 200;
   font-style: italic;
   font-size: 14pt;
-  color: #D3D3D3;
-}
-
-h1{
-  color: #D3D3D3;
 }
 
 .heading {
@@ -135,7 +107,7 @@ h1{
 }
 
 #questionnaire {
-  margin-top: 60px;
+  margin-top: -3px;
   margin-bottom: 10em;
 }
 #questionnaire .top {
@@ -266,8 +238,8 @@ h1{
 }
 .spinner__outline {
   position: absolute;
-  height: 350px;
-  width: 350px;
+  height: 88vh;
+  width: 95vw;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -458,7 +430,7 @@ h1{
     opacity: 0;
   }
   to {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 }
 @keyframes grow {

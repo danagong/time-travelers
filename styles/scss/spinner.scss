@@ -1,5 +1,4 @@
 @use 'globals' as g;
-$size: 350px;
 $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a, 
 #ff80aa, #ff6699, #d65c85, #ff4d88,  #ff3377;
 
@@ -12,8 +11,8 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
     align-items: center;
     &__outline {
         position: absolute;
-        height: $size;
-        width: $size;
+        height: 88vh;
+        width: 95vw;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -80,7 +79,7 @@ $colors: #fed7de, #ffccdd, #febec9, #fda5b4, #fc8c9f, #ff80aa, #fc738a,
             opacity: 0;
         }
         to {
-            opacity: 0.7;
+            opacity: 0.9;
         }
     }
     @keyframes grow {

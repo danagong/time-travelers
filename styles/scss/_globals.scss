@@ -26,6 +26,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Newspaper";
+    src: url("../../assets/OldNewspaperTypes.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @mixin cursive {
     font-family: 'CooperHewitt';
     font-weight: 200;

@@ -1,5 +1,16 @@
 @use 'globals' as g;
 
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.scroll-outer {
+    overflow: hidden;
+}
 .book {
     font-family: 'CooperHewittBook'
 }
@@ -10,13 +21,40 @@
 }
 
 
-#intro {
-
-    //font-size: 100px;
-    //position: relative;
-    //width: 60%;
-    //margin-left: 20px;
-    // margin: 0 auto;
+#notes-section {
+    border: 1px solid red;
+    background-image: url("../../img/grid.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    .top {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 3em;
+        #concept {
+            max-width: 40%;
+            z-index: 1;
+        }
+    }
+    .notes-text {
+        background-image: url("../../img/notes-background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+        width: 75vw;
+        color: black;
+        margin: 0 auto;
+        overflow-y: scroll;
+        .text p {
+            margin: 1.5em 2em 0 2.8em;
+            font-family: 'Newspaper' !important;
+            font-style: normal !important;
+        }
+    }
 }
 
 body {
@@ -49,10 +87,19 @@ body {
     position: absolute; 
 }
 
-.notcanvas {
-    margin-left: 20px;
+.y.mandatory-scroll-snapping {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
 }
-
+.notcanvas {
+    height: 100%;
+    width: 100%;
+}
+.section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -68,15 +115,6 @@ p {
     font-size: 14pt;
 }
 
-.heading {
-    /* bottom: 0; */
-    /* float: bottom; */
-    @include g.bold;
-    text-align: left;
-    font-size: 30px;;
-    color: white;
-    padding-bottom: 50px;
-}
 
 #subtitle {
     font-weight: 20pt;
@@ -86,9 +124,14 @@ p {
     float: right;
 }
 
-#questionnaire {
-    margin-top: -3px;
-    margin-bottom: 10em;
+#questionnaire-intro {
+
+    border: 1px solid yellow;
+    @include g.bold;
+    text-align: left;
+    font-size: 30px;;
+    color: white;
+    padding-bottom: 50px;
     .top {
         display: flex;
         align-items: baseline;
@@ -102,10 +145,17 @@ p {
             }
         }
     }
-
+    .quote {
+        margin: 2em;
+    }
     .leadin {
         display: none;
     }
+}
+#questionnaire-section {
+    display: flex;
+    border: 1px solid blue;
+    margin-top: -3px;
 
     .container {
         width: 85%;
@@ -118,6 +168,8 @@ p {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 80%;
+            align-self: center;
         }
         .clock-section {
             width: 40%;

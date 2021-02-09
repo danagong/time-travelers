@@ -19,7 +19,7 @@ $(document).ready(function() {
   getTimes(now.getSeconds(), 60 * now.getMinutes(), 3600 * now.getHours());
 
   $("#start").click(function() {
-    $(".top").hide();
+    // $(".top").hide();
     $(".leadin").show();
     $("#q-" + current).show();
      getTimes(positions[current-1][0], positions[current-1][1], positions[current-1][2]);

@@ -15,7 +15,7 @@ let WebglGraphics
 p.setup = function() {
 	
 	
-	p.createCanvas(p.windowWidth,700);
+	p.createCanvas(p.windowWidth,660);
 	p.background(25, 25, 25);
 	
 

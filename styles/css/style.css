@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 @font-face {
   font-family: "CooperHewitt";
   src: url("../../assets/Cooper-Hewitt.ttf") format("truetype");
@@ -28,18 +29,10 @@
   font-weight: normal;
   font-style: normal;
 }
-html {
-  scroll-behavior: smooth;
-}
-
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-.scroll-outer {
-  overflow: hidden;
 }
 
 .book {
@@ -52,37 +45,58 @@ html, body {
   font-style: italic;
 }
 
+.section-leadin {
+  height: calc(100% - 660px);
+}
+.section-leadin .leadin-title {
+  font-family: "Bungee Shade", cursive;
+  font-size: 2.85rem;
+  margin: 7px 0 0 1em;
+}
+
 #notes-section {
-  border: 1px solid red;
   background-image: url("../../img/grid.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  padding-bottom: 70em;
   width: 100%;
 }
 #notes-section .top {
   display: flex;
   justify-content: center;
   margin-top: 2em;
+  padding-top: 8em;
   margin-bottom: 3em;
 }
 #notes-section .top #concept {
   max-width: 40%;
   z-index: 1;
 }
-#notes-section .notes-text {
+#notes-section .notes-outside {
+  display: flex;
+}
+#notes-section .notes-outside .notes-text {
   background-image: url("../../img/notes-background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
-  width: 75vw;
   color: black;
   margin: 0 auto;
-  overflow-y: scroll;
 }
-#notes-section .notes-text .text p {
+#notes-section .notes-outside .notes-text:nth-of-type(1) {
+  height: 100%;
+  width: 30vw;
+}
+#notes-section .notes-outside .notes-text:nth-of-type(1) .text {
+  margin-bottom: 3em;
+}
+#notes-section .notes-outside .notes-text:nth-of-type(2) {
+  margin-top: 5em;
+  width: 50vw;
+}
+#notes-section .notes-outside .notes-text .text p {
   margin: 1.5em 2em 0 2.8em;
   font-family: "Newspaper" !important;
   font-style: normal !important;
@@ -119,11 +133,6 @@ body {
   position: absolute;
 }
 
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-  overflow: scroll;
-}
-
 .notcanvas {
   height: 100%;
   width: 100%;
@@ -132,7 +141,6 @@ body {
 .section {
   height: 100vh;
   width: 100vw;
-  scroll-snap-align: center;
 }
 
 .row {
@@ -158,35 +166,70 @@ p {
   font-weight: 20pt;
 }
 
-#quote {
-  float: right;
-}
-
 #questionnaire-intro {
-  border: 1px solid yellow;
-  font-family: "CooperHewitt";
-  font-weight: 700;
-  font-style: normal;
+  height: 50vh !important;
   text-align: left;
-  font-size: 30px;
   color: white;
-  padding-bottom: 50px;
 }
-#questionnaire-intro .top {
-  display: flex;
-  align-items: baseline;
+#questionnaire-intro p {
+  font-size: 1.5rem;
 }
-#questionnaire-intro .top #start {
+#questionnaire-intro #start {
+  font-family: "Newspaper" !important;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 3rem;
   margin-left: 1em;
-  text-decoration: underline;
-  color: #ff3377;
   letter-spacing: 1px;
 }
-#questionnaire-intro .top #start:hover {
-  cursor: pointer;
+#questionnaire-intro #start:visited {
+  text-decoration: none;
+  color: white;
+}
+#questionnaire-intro #start:hover {
+  text-decoration: underline;
 }
 #questionnaire-intro .quote {
-  margin: 2em;
+  margin: 2rem;
+}
+#questionnaire-intro .quote p {
+  font-family: Arial, serif !important;
+}
+#questionnaire-intro .quote .rolling-text .curved {
+  font-size: 1.3rem;
+  line-height: 0;
+  height: 0;
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+#questionnaire-intro .quote .rolling-text .curved div span {
+  display: inline-block !important;
+}
+#questionnaire-intro .quote #rolling2 {
+  left: -13px;
+  bottom: 10px;
+}
+#questionnaire-intro .quote #rolling3 {
+  left: -29px;
+  bottom: 28px;
+}
+#questionnaire-intro .quote #rolling4 {
+  bottom: 9px;
+  left: -44px;
+}
+#questionnaire-intro .quote #rolling5 {
+  left: -74px;
+  bottom: 20px;
+}
+#questionnaire-intro .quote__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  margin-top: -5em;
 }
 #questionnaire-intro .leadin {
   display: none;
@@ -194,8 +237,8 @@ p {
 
 #questionnaire-section {
   display: flex;
-  border: 1px solid blue;
   margin-top: -3px;
+  height: 70vh;
 }
 #questionnaire-section .container {
   width: 85%;
@@ -229,6 +272,38 @@ p {
 #questionnaire-section .question-section .question-section:first-of-type {
   margin-bottom: 1em;
 }
+#questionnaire-section #q-1 .statement {
+  display: flex;
+  text-align: left;
+}
+#questionnaire-section #q-1 .choices {
+  float: left;
+  text-align: left;
+}
+#questionnaire-section #q-2 .statement {
+  display: flex;
+  text-align: right !important;
+}
+#questionnaire-section #q-2 .choices {
+  float: right;
+  text-align: right;
+}
+#questionnaire-section #q-3 .statement {
+  display: flex;
+  text-align: right !important;
+}
+#questionnaire-section #q-3 .choices {
+  float: right;
+  text-align: right;
+}
+#questionnaire-section #q-4 .statement {
+  display: flex;
+  text-align: left;
+}
+#questionnaire-section #q-4 .choices {
+  float: left;
+  text-align: left;
+}
 
 .clock {
   height: 100%;
@@ -244,6 +319,7 @@ p {
   display: flex;
   justify-content: center;
   position: relative;
+  box-shadow: 18px 0px 15px #fda5b4, inset 3px 1px 2px #fda5b4;
 }
 .clock__outline-outer {
   border: 2px solid #ff3377;
@@ -253,6 +329,7 @@ p {
   margin: 2px;
   padding-bottom: 15px;
   padding-right: 15px;
+  box-shadow: inset 0px 0px 0 2px #ff3377, -7px 4px 12px 0px #ff3377;
 }
 .clock__second, .clock__minute, .clock__hour {
   position: absolute;

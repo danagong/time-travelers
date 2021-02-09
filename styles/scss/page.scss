@@ -1,16 +1,16 @@
 @use 'globals' as g;
 
 html {
-    scroll-behavior: smooth;
+    //scroll-behavior: smooth;
 }
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
 }
-.scroll-outer {
-    overflow: hidden;
-}
+//.scroll-outer {
+//    overflow: hidden;
+//}
 .book {
     font-family: 'CooperHewittBook'
 }
@@ -20,41 +20,67 @@ html, body {
     @include g.cursive;
 }
 
+.section-leadin {
+    height: calc(100% - 660px);
+
+    .leadin-title {
+        font-family: "Bungee Shade", cursive;
+        font-size: 2.85rem;
+        margin: 7px 0 0 1em;
+    }
+}
+
 
 #notes-section {
-    border: 1px solid red;
     background-image: url("../../img/grid.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    padding-bottom: 70em;
+    //height: 150vh;
     width: 100%;
     .top {
         display: flex;
         justify-content: center;
         margin-top: 2em;
+        padding-top: 8em;
         margin-bottom: 3em;
         #concept {
             max-width: 40%;
             z-index: 1;
         }
     }
-    .notes-text {
-        background-image: url("../../img/notes-background.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 50vh;
-        width: 75vw;
-        color: black;
-        margin: 0 auto;
-        overflow-y: scroll;
-        .text p {
-            margin: 1.5em 2em 0 2.8em;
-            font-family: 'Newspaper' !important;
-            font-style: normal !important;
+    .notes-outside {
+        display: flex;
+        .notes-text {
+            background-image: url("../../img/notes-background.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            margin: 0 auto;
+
+
+            &:nth-of-type(1) {
+                height: 100%;
+                width: 30vw;
+                .text {
+                    margin-bottom: 3em;
+                }
+            }
+            &:nth-of-type(2) {
+                margin-top: 5em;
+                width: 50vw;
+            }
+            .text p {
+                margin: 1.5em 2em 0 2.8em;
+                font-family: 'Newspaper' !important;
+                font-style: normal !important;
+            }
         }
     }
+
 }
 
 body {
@@ -88,8 +114,8 @@ body {
 }
 
 .y.mandatory-scroll-snapping {
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
+    //scroll-snap-type: y mandatory;
+    //overflow: scroll;
 }
 .notcanvas {
     height: 100%;
@@ -98,7 +124,7 @@ body {
 .section {
     height: 100vh;
     width: 100vw;
-    scroll-snap-align: center;
+    //scroll-snap-align: center;
 }
 .row {
     display: flex;
@@ -120,33 +146,75 @@ p {
     font-weight: 20pt;
 }
 
-#quote {
-    float: right;
-}
-
 #questionnaire-intro {
-
-    border: 1px solid yellow;
-    @include g.bold;
+    height: 50vh !important;
     text-align: left;
-    font-size: 30px;;
     color: white;
-    padding-bottom: 50px;
-    .top {
-        display: flex;
-        align-items: baseline;
-        #start {
-            margin-left: 1em;
-            text-decoration: underline;
-            color: g.$hotpink;
-            letter-spacing: 1px;
-            &:hover {
-                cursor: pointer;
-            }
+    p {
+        font-size: 1.5rem;
+    }
+    #start {
+        font-family: 'Newspaper' !important;
+        font-style: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 3rem;
+        margin-left: 1em;
+        letter-spacing: 1px;
+        &:visited {
+           text-decoration: none;
+           color: white;
+        }
+        &:hover {
+           text-decoration: underline;
         }
     }
+
     .quote {
-        margin: 2em;
+        margin: 2rem;
+        p {
+            font-family: Arial, serif !important;
+        }
+        .rolling-text {
+            .curved {
+                font-size: 1.3rem;
+                line-height: 0;
+                height: 0;
+                position: relative;
+                display: inline-block;
+                width: auto;
+                div {
+                    span {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+        #rolling2 {
+            //transform-origin:0 100%;
+            left: -13px;
+            bottom: 10px;
+        }
+        #rolling3 {
+            left: -29px;
+            bottom: 28px;
+        }
+        #rolling4 {
+            bottom: 9px;
+            left: -44px;
+        }
+        #rolling5 {
+            left: -74px;
+            bottom: 20px;
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            height: 100%;
+            margin-top: -5em;
+        }
     }
     .leadin {
         display: none;
@@ -154,9 +222,8 @@ p {
 }
 #questionnaire-section {
     display: flex;
-    border: 1px solid blue;
     margin-top: -3px;
-
+    height: 70vh;
     .container {
         width: 85%;
         min-height: 60vh;
@@ -188,6 +255,46 @@ p {
         }   
         .question-section:first-of-type {
             margin-bottom: 1em;
+        }
+    }
+    #q-1 {
+        .statement {
+            display: flex;
+            text-align: left;
+        }
+        .choices {
+            float: left;
+            text-align: left;
+        }
+    }
+    #q-2 {
+        .statement {
+            display: flex;
+            text-align: right !important;
+        }
+        .choices {
+            float: right;
+            text-align: right;
+        }
+    }
+    #q-3 {
+        .statement {
+            display: flex;
+            text-align: right !important;
+        }
+        .choices {
+            float: right;
+            text-align: right;
+        }
+    }
+    #q-4 {
+        .statement {
+            display: flex;
+            text-align: left;
+        }
+        .choices {
+            float: left;
+            text-align: left;
         }
     }
 }

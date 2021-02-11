@@ -38,21 +38,21 @@ p.draw = function() {
 	
 	drawingGraphics.clear(0,0,p.width,p.height)
 	//drawingGraphics.ellipse(mouseX,mouseY,850)
-	
 	drawingGraphics.stroke(255)
 	drawingGraphics.strokeWeight(2)
 	drawingGraphics.push()
-	if (p.mouseIsPressed){
+	if (mouseIsPressed){
 		drawingGraphics.noFill()
 	}else{
 		drawingGraphics.fill(147,3,176)
 	}
 		
 		// drawingGraphics.noFill()
-		//for(var i=0;i<800;i+=200){
-			//drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
-		//}
+	for(var i=200;i<800;i+=200){
+		drawingGraphics.ellipse(mouseX,mouseY,i)
+	}
 	drawingGraphics.pop()
+	
 	
 	drawingGraphics.push()
 		drawingGraphics.textSize(105)

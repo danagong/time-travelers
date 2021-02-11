@@ -20,15 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e5d0-3edc-4a3e-9368-d510cce3328f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/rolling.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mySketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mySketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/questionnaire.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/questionnaire.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/clock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/clock.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/scss/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/page.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +70,9 @@
       <workItem from="1611686136935" duration="48000" />
       <workItem from="1611870448879" duration="65000" />
       <workItem from="1611875281198" duration="566000" />
-      <workItem from="1612804699061" duration="11035000" />
+      <workItem from="1612804699061" duration="11270000" />
+      <workItem from="1612926258135" duration="156000" />
+      <workItem from="1613003950880" duration="699000" />
     </task>
     <servers />
   </component>
@@ -92,6 +89,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="250" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612807889109">

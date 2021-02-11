@@ -40,11 +40,14 @@ html, body {
     padding-bottom: 70em;
     //height: 150vh;
     width: 100%;
+    .notes-spacer {
+       padding-top: 20em;
+    }
     .top {
         display: flex;
         justify-content: center;
-        margin-top: 2em;
-        padding-top: 8em;
+        //margin-top: 2em;
+        //padding-top: 8em;
         margin-bottom: 3em;
         #concept {
             max-width: 40%;
@@ -223,7 +226,7 @@ p {
 #questionnaire-section {
     display: flex;
     margin-top: -3px;
-    height: 70vh;
+    height: 50vh;
     .container {
         width: 85%;
         min-height: 60vh;

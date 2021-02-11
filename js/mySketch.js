@@ -16,11 +16,11 @@ p.setup = function() {
 	
 	
 	p.createCanvas(p.windowWidth,660);
-	p.background(25, 25, 25);
+	p.background(100);
 	
 
 
-	WebglGraphics = p.createGraphics(p.width,p.height,p.WEBGL)
+	WebglGraphics = p.createGraphics(p.width,p.height,WEBGL)
 	drawingGraphics = p.createGraphics(p.width,p.height)
 	
 	mouseX = p.width/2
@@ -31,8 +31,8 @@ p.draw = function() {
 
 	WebglGraphics.shader(theShader)
 	theShader.setUniform('u_resolution',[p.width/1000,p.height/700])
-	theShader.setUniform('u_time',p.millis()/10000)
-	theShader.setUniform('u_mouse',[mouseX/p.width,mouseY/p.height])
+	theShader.setUniform('u_time',p.millis()/1000)
+	theShader.setUniform('u_mouse',[p.mouseX/p.width,p.mouseY/p.height])
 	theShader.setUniform('tex0',drawingGraphics)
 	
 	drawingGraphics.clear(0,0,p.width,p.height)
@@ -69,6 +69,8 @@ p.draw = function() {
 
 			
 		}
+
+		drawingGraphics.pop()
 	
 	//for(var i=0;i<width;i+=50){
 		//for(var o=0;o<height;o+=50){

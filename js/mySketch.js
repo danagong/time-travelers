@@ -64,7 +64,7 @@ p.draw = function() {
 		}
 
 		for(var i=0;i<p.height+400;i+=200){
-		 drawingGraphics.text("TIME TRAVELERS",50,i+(p.frameCount/(5/p.log(mouseY))  )%200  )
+		 drawingGraphics.text("TIME TRAVELERS",50,i+(p.frameCount/(5/p.log(p.mouseY))  )%200  )
 			
 
 			

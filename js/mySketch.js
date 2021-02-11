@@ -19,7 +19,7 @@ p.setup = function() {
 	p.background(25, 25, 25);
 	
 
-	p.noStroke();
+
 	WebglGraphics = p.createGraphics(p.width,p.height,p.WEBGL)
 	drawingGraphics = p.createGraphics(p.width,p.height)
 	
@@ -28,7 +28,6 @@ p.setup = function() {
 }
 
 p.draw = function() {
-	p.clear();
 
 	WebglGraphics.shader(theShader)
 	theShader.setUniform('u_resolution',[p.width/1000,p.height/700])
@@ -49,7 +48,7 @@ p.draw = function() {
 		
 		// drawingGraphics.noFill()
 	for(var i=200;i<800;i+=200){
-		drawingGraphics.ellipse(mouseX,mouseY,i)
+		drawingGraphics.ellipse(p.mouseX,p.mouseY,i)
 	}
 	drawingGraphics.pop()
 	

@@ -163,6 +163,10 @@ p {
   font-weight: 20pt;
 }
 
+#line-holder{
+  z-index: 12;
+}
+
 #questionnaire-intro {
   height: 50vh !important;
   text-align: left;

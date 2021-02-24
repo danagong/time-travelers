@@ -55,16 +55,14 @@ html, body {
 }
 
 #notes-section {
-  background-image: url("../../img/grid.png");
+  background-image: url("../../img/gridtop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  padding-bottom: 70em;
-  width: 100%;
+  height: 180vh;
 }
 #notes-section .notes-spacer {
-  padding-top: 20em;
+  padding-top: 10em;
 }
 #notes-section .top {
   display: flex;
@@ -129,6 +127,10 @@ body {
   border-radius: 60% 40% 40% 20%;
 }
 
+.topgraphic {
+  top: 0;
+  position: absolute;
+}
 
 .notcanvas {
   height: 100%;
@@ -235,7 +237,7 @@ p {
 #questionnaire-section {
   display: flex;
   margin-top: -3px;
-  height: 50vh;
+  height: 80vh;
 }
 #questionnaire-section .container {
   width: 85%;
@@ -259,7 +261,7 @@ p {
   display: none;
   text-align: center;
 }
-#questionnaire-section .question-section .statement {
+#questionnaire-section .question-section .choices, #questionnaire-section .question-section .statement {
   font-family: "CooperHewitt";
   font-weight: 700;
   font-style: normal;
@@ -594,6 +596,86 @@ p {
   }
   to {
     font-size: 15px;
+  }
+}
+
+#industrialization-section {
+  display: flex;
+}
+#industrialization-section #gears-area {
+  width: 900px;
+}
+#industrialization-section #gears-area #gears__clock {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#industrialization-section #gears-area #gears__bg {
+  max-width: 100%;
+}
+#industrialization-section #gears-area #gears__individual {
+  bottom: -10px;
+  height: 65%;
+  width: 55%;
+  position: absolute;
+  left: 10px;
+}
+#industrialization-section #gears-area #gears__individual .gears__relative {
+  position: relative;
+}
+#industrialization-section #gears-area .gears__rot1 {
+  animation: rotation 2s infinite linear;
+  position: absolute;
+  top: 24px;
+  right: 50px;
+}
+#industrialization-section #gears-area .gears__rot1 img {
+  width: 200px;
+}
+#industrialization-section #gears-area .gears__rot2 {
+  animation: rotation 5s infinite linear;
+  position: absolute;
+  top: 25px;
+  left: -14px;
+}
+#industrialization-section #gears-area .gears__rot2 img {
+  width: 190px;
+}
+#industrialization-section #gears-area .gears__mid {
+  animation: rotation 9s infinite linear;
+  z-index: 10;
+  position: absolute;
+  top: 73px;
+  left: 66px;
+}
+#industrialization-section #gears-area .gears__mid img {
+  width: 300px;
+}
+#industrialization-section #gears-area .gears__rot3 {
+  animation: rotation 7s infinite linear;
+  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#industrialization-section #gears-area .gears__rot3 img {
+  width: 260px;
+}
+#industrialization-section #industrialization-text-area {
+  flex: 1;
+}
+#industrialization-section #industrialization-text-area img {
+  position: absolute;
+  width: 95%;
+  right: 20px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
 

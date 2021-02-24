@@ -1,0 +1,92 @@
+#industrialization-section {
+  display: flex;
+  #gears-area {
+    width: 900px;
+
+    #gears__clock {
+      //background-image: url("../../img/indust-clock-background.png");
+      //position: relative;
+      //background-position: center;
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    #gears__bg {
+      max-width: 100%;
+    }
+    #gears__individual {
+
+      bottom: -10px;
+      height: 65%;
+      width: 55%;
+      position: absolute;
+      left: 10px;
+      .gears__relative {
+        position: relative;
+      }
+    }
+    .gears__rot1 {
+      animation: rotation 2s infinite linear;
+      position: absolute;
+      top: 24px;
+      right: 50px;
+      //border: 1px solid blue;
+      img {
+        width: 200px;
+      }
+    }
+    .gears__rot2 {
+      animation: rotation 5s infinite linear;
+      position: absolute;
+      top: 25px;
+      left: -14px;
+      //border: 1px solid red;
+      img {
+        width: 190px;
+      }
+    }
+    .gears__mid {
+      animation: rotation 9s infinite linear;
+      z-index: 10;
+      position: absolute;
+      top: 73px;
+      left: 66px;
+      //border: 1px solid yellow;
+      img {
+        width: 300px;
+      }
+    }
+    .gears__rot3 {
+      animation: rotation 7s infinite linear;
+      z-index: 20;
+      position: absolute;
+      bottom:0;
+      right:0;
+      //border: 1px solid green;
+      img {
+        width: 260px;
+      }
+    }
+  }
+
+  #industrialization-text-area {
+    flex: 1;
+    img {
+      position: absolute;
+      width: 95%;
+      right: 20px;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

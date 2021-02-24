@@ -45,8 +45,8 @@ function Particle(x,y){
   
   function setup(){
     
-    var canvas = createCanvas(windowWidth, 200);
-    canvas.parent('line-holder');
+    var canvas2 = createCanvas(windowWidth, 200);
+    canvas2.parent('line-holder');
     smooth();
     x = mouseX;
     particle = new Particle(x,100);

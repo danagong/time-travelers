@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e5d0-3edc-4a3e-9368-d510cce3328f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/styles/scss/gears.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/introquote.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/gridtop.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/gridtop.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/bubbles.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bubbles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/particle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/particle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/scss/page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +79,7 @@
       <workItem from="1613073657713" duration="327000" />
       <workItem from="1614013027800" duration="3624000" />
       <workItem from="1614021816866" duration="2683000" />
-      <workItem from="1614119368902" duration="2014000" />
+      <workItem from="1614119368902" duration="2336000" />
     </task>
     <servers />
   </component>

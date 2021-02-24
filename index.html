@@ -3,6 +3,7 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js" type="text/javascript"></script>
     <script src="js/mySketch.js" type="text/javascript"></script>
     <script src="js/particle.js" type="text/javascript"></script>
+    <script src="js/bubbles.js" type="text/javascript"></script>
     <script src="js/frag_functions_default.js" type="text/javascript"></script>
     <script src="js/frag.js" type="text/javascript"></script>
     <script src="js/vert.js" type="text/javascript"></script>
@@ -15,15 +16,17 @@
     </div>
 
 <div class="section-leadin">
-    <p class="leadin-title">our perception of time</p>
+    <p style="margin-top: 50px" class="leadin-title">our perception of time</p>
 </div>
 
 <br>
 <div class="scroll-outer">
 <div class = "notcanvas y mandatory-scroll-snapping">
-    <!--The Questionnaire Section-->
+    <img style= "max-width: 1200px" src = "img/introquote.png">
+    <!--The Questionnaire Section  -->
     <div class="section" id="questionnaire-intro">
         <div class="quote">
+            <!--- 
             <div class="rolling-text">
                 <p class="curved">TIME TRAVELERS: a cliche term in popular culture whi</p>
                 <p class="curved" id="rolling1">ch we appropria</p>
@@ -33,12 +36,15 @@
                 <p class="curved" id="rolling5">nts in time.</p>
                 <div class="f"></div>
             </div>
-            <br>
-            <div class="quote__right">
+                  <br>
+            -->
+             
+            <div style="margin-top: -250px" class="quote__right">
                 <p>Taeyoon Choi, School of Poetic Computation</p>
                 <a id="start" href="#start">begin</a>
             </div>
         </div>
+   
 
 <!--        <p class="leadin book"> How much do you agree with the following statements:</p>-->
     </div>
@@ -214,11 +220,12 @@
             <img src="img/industrialization-text.png">
         </div>
     </div>
-    <div class="section" id="placeholder-next-next-section" style="border:1px solid whitesmoke">
-        <p>placeholder text</p>
 
-        <div id="line-holder">
-        </div>
+    <div class="section" id="placeholder-next-section">
+        <div id="line-holder"></div> <br>
+    </div>
+    <div class="section" id="placeholder-next-next-section">
+        <div id= "canvas2HTML"></div>
     </div>
 </div>
 </div>
@@ -226,7 +233,6 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js" integrity="sha256-OF8sWQd2+KBhmHPCT4frE/uf/WFB4Cp8kVF/gefmeh4=" crossorigin="anonymous"></script>
-<script src="js/rolling.js"></script>
 <script src="js/questionnaire.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 @font-face {
   font-family: "CooperHewitt";
   src: url("../../assets/Cooper-Hewitt.ttf") format("truetype");
@@ -29,28 +29,24 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Helvetica";
 }
 
-.book {
-  font-family: "CooperHewittBook";
-}
 
-.cursive {
-  font-family: "CooperHewitt";
-  font-weight: 200;
-  font-style: italic;
-}
 
 .section-leadin {
   height: calc(100% - 660px);
 }
 .section-leadin .leadin-title {
-  font-family: "Bungee Shade", cursive;
-  font-size: 2.85rem;
+  font-family: "Helvetica Neue";
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+  font-size: 4rem;
   margin: 7px 0 0 1em;
 }
 
@@ -101,8 +97,9 @@ html, body {
   font-style: normal !important;
 }
 
+
+
 body {
-  font-family: "CooperHewitt";
   font-weight: 200;
   font-style: italic;
   color: white;

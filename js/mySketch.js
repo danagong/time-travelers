@@ -56,6 +56,7 @@ p.draw = function() {
 	drawingGraphics.push()
 		drawingGraphics.textSize(105)
 		drawingGraphics.textStyle(p.BOLDITALIC)
+		drawingGraphics.textFont('Helvetica');
 
 		if (p.mouseIsPressed){
 			drawingGraphics.fill(255)

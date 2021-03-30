@@ -161,6 +161,13 @@ p {
   font-weight: 20pt;
 }
 
+#ghosts{
+  max-width: 800px; 
+  max-height: 1200px;
+  margin-left: -600px; 
+  margin-top: 90px; 
+  opacity: .7;
+}
 #questionnaire-intro {
   height: 50vh !important;
   text-align: left;

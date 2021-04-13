@@ -1,7 +1,8 @@
 #industrialization-section {
   display: flex;
+  justify-content: center;
   #gears-area {
-    width: 900px;
+    width: 750px;
 
     #gears__clock {
       //background-image: url("../../img/indust-clock-background.png");
@@ -17,8 +18,23 @@
     #gears__bg {
       max-width: 100%;
     }
-    #gears__individual {
+    .gears__longing {
+      z-index: 5;
+      animation: rotation 3s infinite linear;
+      position: absolute;
+      width: 225px;
+      height: 225px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
+      img {
+        width: 100%;
+      }
 
+    }
+    #gears__individual {
       bottom: -10px;
       height: 65%;
       width: 55%;
@@ -28,17 +44,25 @@
         position: relative;
       }
     }
+    .gears__handles {
+      z-index: 10;
+      position: absolute;
+      width: 300px;
+      right: 27px;
+      top: 38px;
+    }
     .gears__rot1 {
+      z-index: 3;
       animation: rotation 2s infinite linear;
       position: absolute;
-      top: 24px;
-      right: 50px;
-      //border: 1px solid blue;
+      top: 65px;
+      left: 91px;
       img {
-        width: 200px;
+        width: 175px;
       }
     }
     .gears__rot2 {
+      z-index: 2;
       animation: rotation 5s infinite linear;
       position: absolute;
       top: 25px;
@@ -48,30 +72,50 @@
         width: 190px;
       }
     }
-    .gears__mid {
-      animation: rotation 9s infinite linear;
-      z-index: 10;
+    .gears__rot3 {
+      z-index: 1;
+      animation: rotation 5s infinite linear;
       position: absolute;
-      top: 73px;
-      left: 66px;
-      //border: 1px solid yellow;
+      bottom: 111px;
+      left: 55px;
       img {
-        width: 300px;
+        width: 190px;
       }
     }
-    .gears__rot3 {
-      animation: rotation 7s infinite linear;
-      z-index: 20;
+    .gears__rot4 {
+      z-index: 2;
+      animation: rotation 5s infinite linear;
       position: absolute;
-      bottom:0;
-      right:0;
-      //border: 1px solid green;
+      bottom: 138px;
+      right: 33px;
       img {
-        width: 260px;
+        width: 195px;
       }
     }
   }
 
+  .gears__bottom {
+    animation: rotation 9s infinite linear;
+    z-index: 20;
+    width: 270px;
+    height: 270px;
+    bottom: -55px;
+  }
+  .gears__bottom-center {
+    z-index: 21;
+    width: 225px;
+    height: 225px;
+    bottom: -33px;
+  }
+  .gears__bottom, .gears__bottom-center {
+    position: absolute;
+    margin: auto;
+    left: 46px;
+    right: 0;
+    img {
+      width: 100%;
+    }
+  }
   #industrialization-text-area {
     flex: 1;
     img {
